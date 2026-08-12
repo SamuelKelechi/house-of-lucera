@@ -21,12 +21,20 @@ import {
 
 import "./clothing.css";
 
+type Product = {
+  id: number;
+  name: string;
+  price: string;
+  installment: string;
+  image: string;
+  reviews: number;
+};
 
 /* =========================================================
    PRODUCTS
 ========================================================= */
 
-const products = [
+const products: Product[] = [
   {
     id: 1,
     name: "Luxe Satin Dress",
@@ -122,13 +130,12 @@ const sizes = [
 
 export default function Clothing() {
 
-  const [wishlist, setWishlist] = useState([]);
+  const [wishlist, setWishlist] = useState<number[]>([]);
 
   const [activeCategory, setActiveCategory] =
     useState("Lucéra Collection");
 
-  const [selectedSize, setSelectedSize] =
-    useState(null);
+  const [selectedSize, setSelectedSize] = useState<string>("");
 
   const [sortOpen, setSortOpen] =
     useState(false);
@@ -140,32 +147,25 @@ export default function Clothing() {
   /* =======================================================
      WISHLIST
   ======================================================= */
+const toggleWishlist = (
+  id: number,
+  event: React.MouseEvent<HTMLButtonElement>
+) => {
+  event.preventDefault();
 
-  const toggleWishlist = (id, event) => {
-
-    event.preventDefault();
-    event.stopPropagation();
-
-    setWishlist((current) => {
-
-      if (current.includes(id)) {
-        return current.filter(
-          (item) => item !== id
-        );
-      }
-
-      return [...current, id];
-
-    });
-
-  };
+  setWishlist((current: number[]) =>
+    current.includes(id)
+      ? current.filter((item) => item !== id)
+      : [...current, id]
+  );
+};
 
 
   /* =======================================================
      SIZE
   ======================================================= */
 
-  const handleSizeSelect = (size) => {
+  const handleSizeSelect = (size: string) => {
 
     setSelectedSize((current) =>
       current === size ? null : size
@@ -717,12 +717,7 @@ export default function Clothing() {
                       <button
                         type="button"
                         className="wishlist-button"
-                        onClick={(event) =>
-                          toggleWishlist(
-                            product.id,
-                            event
-                          )
-                        }
+                       onClick={(event) => toggleWishlist(product.id, event)}
                         aria-label={
                           wishlist.includes(
                             product.id

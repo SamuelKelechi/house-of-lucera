@@ -1,0 +1,828 @@
+/* =========================================================
+   HOUSE OF LUCÉRA
+   ORDER SUCCESS PAGE
+========================================================= */
+
+.order-success-page {
+  min-height: 100vh;
+  background: #fff;
+  color: var(--lucera-text, #171717);
+}
+
+
+/* =========================================================
+   SUCCESS HERO
+========================================================= */
+
+.success-hero {
+  position: relative;
+
+  padding: 75px 20px 65px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8f1eb 0%,
+      #f3e9df 50%,
+      #eee2d6 100%
+    );
+
+  border-bottom: 1px solid #e8dfd7;
+
+  overflow: hidden;
+}
+
+.success-hero::before,
+.success-hero::after {
+  content: "";
+
+  position: absolute;
+
+  border: 1px solid rgba(185, 151, 75, 0.16);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.success-hero::before {
+  width: 500px;
+  height: 500px;
+
+  top: -350px;
+  left: -150px;
+}
+
+.success-hero::after {
+  width: 420px;
+  height: 420px;
+
+  right: -180px;
+  bottom: -330px;
+}
+
+
+/* =========================================================
+   SUCCESS ICON
+========================================================= */
+
+.success-icon {
+  width: 62px;
+  height: 62px;
+
+  margin: 0 auto 22px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid #c4a65d;
+
+  border-radius: 50%;
+
+  color: #b9974b;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.04);
+
+  animation: successPop 0.55s ease both;
+}
+
+@keyframes successPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  70% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.success-eyebrow {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: #b9974b;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+.success-hero h1 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: clamp(45px, 6vw, 72px);
+
+  line-height: 0.9;
+
+  font-weight: 500;
+}
+
+.success-hero > p {
+  margin: 20px auto 0;
+
+  color: #69635d;
+
+  font-size: 9px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   ORDER NUMBER
+========================================================= */
+
+.order-number {
+  width: fit-content;
+
+  margin: 27px auto 0;
+
+  padding: 12px 24px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  border: 1px solid rgba(185, 151, 75, 0.25);
+
+  border-radius: 3px;
+}
+
+.order-number span {
+  color: #77716b;
+
+  font-size: 6px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+.order-number strong {
+  color: #171717;
+
+  font-size: 8px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   SUCCESS CONTENT
+========================================================= */
+
+.success-content {
+  width: min(1200px, 90%);
+
+  margin: 70px auto;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 330px;
+
+  gap: 25px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.success-main {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.success-card {
+  padding: 30px;
+
+  background: #fff;
+
+  border: 1px solid #e8e2dd;
+
+  border-radius: 3px;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.success-card:hover {
+  border-color: #d9c8aa;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.card-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.card-heading > svg {
+  flex-shrink: 0;
+
+  color: #b9974b;
+}
+
+.small-label {
+  display: block;
+
+  color: #b9974b;
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.card-heading h2 {
+  margin: 8px 0 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 30px;
+
+  line-height: 1;
+
+  font-weight: 500;
+}
+
+.success-divider,
+.summary-divider {
+  height: 1px;
+
+  background: #ebe5df;
+
+  margin: 22px 0;
+}
+
+
+/* =========================================================
+   ORDER STATUS
+========================================================= */
+
+.order-status {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.status-step {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+.status-icon {
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid #ded7d0;
+
+  border-radius: 50%;
+
+  color: #8a837c;
+}
+
+.status-step.active .status-icon {
+  color: #fff;
+
+  background: #b9974b;
+
+  border-color: #b9974b;
+}
+
+.status-step strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 8px;
+
+  font-weight: 600;
+}
+
+.status-step span {
+  display: block;
+
+  color: #77716c;
+
+  font-size: 7px;
+
+  line-height: 1.5;
+}
+
+.status-line {
+  width: 1px;
+  height: 22px;
+
+  margin-left: 15px;
+
+  background: #ddd7d1;
+}
+
+
+/* =========================================================
+   DELIVERY
+========================================================= */
+
+.delivery-placeholder {
+  min-height: 80px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 5px 0;
+}
+
+.delivery-placeholder p {
+  max-width: 450px;
+
+  margin: 0;
+
+  color: #77716c;
+
+  font-size: 8px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.success-note {
+  padding: 22px 25px;
+
+  background: #faf7f3;
+
+  border-left: 2px solid #b9974b;
+}
+
+.success-note strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 21px;
+
+  font-weight: 600;
+}
+
+.success-note p {
+  margin: 0;
+
+  max-width: 600px;
+
+  color: #6d6761;
+
+  font-size: 8px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.success-summary {
+  position: sticky;
+
+  top: 30px;
+
+  padding: 30px;
+
+  background: #171513;
+
+  color: #fff;
+
+  overflow: hidden;
+}
+
+.success-summary::after {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  right: -120px;
+  bottom: -140px;
+
+  border: 1px solid rgba(185, 151, 75, 0.25);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.success-summary h2 {
+  position: relative;
+
+  z-index: 1;
+
+  margin: 17px 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 42px;
+
+  line-height: 0.9;
+
+  font-weight: 500;
+}
+
+.success-summary h2 em {
+  color: #c4a45b;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.success-summary > p {
+  position: relative;
+
+  z-index: 1;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 8px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   SUMMARY DETAILS
+========================================================= */
+
+.summary-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 12px;
+}
+
+.summary-row span {
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 7px;
+}
+
+.summary-row strong {
+  font-size: 7px;
+
+  font-weight: 500;
+}
+
+.summary-row .confirmed {
+  color: #c5a45d;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.success-button {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  min-height: 43px;
+
+  margin-top: 9px;
+
+  padding: 0 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.success-button.primary {
+  background: #fff;
+
+  color: #111;
+}
+
+.success-button.primary:hover {
+  background: #b9974b;
+
+  color: #fff;
+
+  transform: translateY(-2px);
+}
+
+.success-button.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  color: #fff;
+}
+
+.success-button.secondary:hover {
+  background: #fff;
+
+  color: #111;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER MESSAGE
+========================================================= */
+
+.success-footer-message {
+  padding: 45px 20px 65px;
+
+  text-align: center;
+
+  border-top: 1px solid #eee8e2;
+}
+
+.success-footer-message span {
+  color: #b9974b;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 19px;
+
+  letter-spacing: 3px;
+}
+
+.success-footer-message p {
+  margin: 7px 0 0;
+
+  color: #88817b;
+
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .success-content {
+    grid-template-columns: minmax(0, 1fr) 280px;
+
+    gap: 18px;
+  }
+
+  .success-card {
+    padding: 25px;
+  }
+
+  .success-summary {
+    padding: 25px;
+  }
+
+  .success-summary h2 {
+    font-size: 36px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .success-hero {
+    padding: 60px 20px 50px;
+  }
+
+  .success-icon {
+    width: 56px;
+    height: 56px;
+
+    margin-bottom: 20px;
+  }
+
+  .success-eyebrow {
+    font-size: 7px;
+  }
+
+  .success-hero h1 {
+    font-size: 48px;
+  }
+
+  .success-hero > p {
+    font-size: 8px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .order-number {
+    padding: 11px 18px;
+
+    gap: 10px;
+  }
+
+  .success-content {
+    width: 92%;
+
+    margin: 45px auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .success-card {
+    padding: 22px 18px;
+  }
+
+  .card-heading h2 {
+    font-size: 27px;
+  }
+
+  .success-summary {
+    position: relative;
+
+    top: auto;
+
+    padding: 27px 22px;
+  }
+
+  .success-summary h2 {
+    font-size: 40px;
+  }
+
+  .success-note {
+    padding: 20px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .success-hero {
+    padding: 50px 15px 45px;
+  }
+
+  .success-hero h1 {
+    font-size: 42px;
+  }
+
+  .success-hero > p {
+    font-size: 7px;
+  }
+
+  .order-number {
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 10px 18px;
+  }
+
+  .success-content {
+    width: 94%;
+
+    margin-top: 35px;
+  }
+
+  .card-heading h2 {
+    font-size: 24px;
+  }
+
+  .status-step {
+    align-items: flex-start;
+  }
+
+  .status-icon {
+    margin-top: 1px;
+  }
+
+  .success-summary h2 {
+    font-size: 36px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}

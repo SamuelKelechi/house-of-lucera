@@ -1,0 +1,472 @@
+/* =========================================================
+   HOUSE OF LUCÉRA
+   SHARED HEADER
+========================================================= */
+
+.promo-bar {
+  min-height: 27px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+
+  background: #050505;
+  color: #ffffff;
+
+  font-size: 8px;
+  letter-spacing: 0.2px;
+}
+
+.promo-divider {
+  opacity: 0.4;
+}
+
+.promo-spacer {
+  width: 35px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  height: 63px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #efefef;
+
+  position: relative;
+  z-index: 20;
+}
+
+.header-inner {
+  height: 100%;
+  width: min(1440px, 92%);
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.brand {
+  width: 105px;
+  height: 53px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.brand img {
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  transition: transform 0.35s ease;
+}
+
+.brand:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  margin-left: auto;
+  margin-right: 35px;
+}
+
+.desktop-nav a {
+  position: relative;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: color 0.25s ease;
+}
+
+/* Animated underline */
+
+.desktop-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: -7px;
+
+  height: 1px;
+
+  background: #b9974b;
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+/* Hover */
+
+.desktop-nav a:hover {
+  color: #b9974b;
+}
+
+.desktop-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Current page */
+
+.desktop-nav a.active {
+  color: #b9974b;
+}
+
+.desktop-nav a.active::after {
+  transform: scaleX(1);
+}
+
+.desktop-nav sup {
+  font-size: 6px;
+  color: #b9974b;
+}
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.header-actions button {
+  width: 20px;
+  height: 25px;
+
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  display: grid;
+  place-items: center;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.header-actions button:hover {
+  color: #b9974b;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   SHOPPING BAG
+========================================================= */
+
+.bag-button {
+  position: relative;
+}
+
+.bag-button span {
+  position: absolute;
+
+  top: -4px;
+  right: -5px;
+
+  width: 11px;
+  height: 11px;
+
+  border-radius: 50%;
+
+  background: #b9974b;
+  color: #ffffff;
+
+  font-size: 6px;
+
+  display: grid;
+  place-items: center;
+
+  transition: transform 0.25s ease;
+}
+
+.bag-button:hover span {
+  transform: scale(1.15);
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  border: 0;
+  background: transparent;
+
+  padding: 0;
+
+  color: #111111;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.mobile-menu-button:hover {
+  color: #b9974b;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   MOBILE MENU OVERLAY
+========================================================= */
+
+.mobile-menu-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  z-index: 100;
+}
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+  width: min(320px, 85%);
+  height: 100%;
+
+  background: #ffffff;
+
+  padding: 20px;
+
+  animation: slideMenu 0.25s ease;
+}
+
+/* =========================================================
+   MOBILE MENU HEADER
+========================================================= */
+
+.mobile-menu-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.mobile-menu-header a {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu-header img {
+  width: 90px;
+  height: 45px;
+
+  object-fit: contain;
+}
+
+.mobile-menu-header button {
+  border: 0;
+  background: transparent;
+
+  padding: 0;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.mobile-menu-header button:hover {
+  color: #b9974b;
+  transform: rotate(90deg);
+}
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.mobile-menu nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu nav a {
+  position: relative;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid #eeeeee;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition:
+    color 0.25s ease,
+    padding-left 0.25s ease;
+}
+
+.mobile-menu nav a:hover {
+  color: #b9974b;
+  padding-left: 5px;
+}
+
+/* Active mobile page */
+
+.mobile-menu nav a.active {
+  color: #b9974b;
+}
+
+/* =========================================================
+   MOBILE MENU ANIMATION
+========================================================= */
+
+@keyframes slideMenu {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .desktop-nav {
+    gap: 15px;
+    margin-right: 15px;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .promo-bar {
+    min-height: 25px;
+
+    font-size: 6px;
+
+    gap: 6px;
+
+    padding: 0 10px;
+
+    white-space: nowrap;
+  }
+
+  .promo-spacer {
+    display: none;
+  }
+
+  /* Header */
+
+  .header {
+    height: 67px;
+  }
+
+  .header-inner {
+    width: 92%;
+  }
+
+  /* Hamburger */
+
+  .mobile-menu-button {
+    display: grid;
+    place-items: center;
+  }
+
+  /* Center logo */
+
+  .brand {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 88px;
+    height: 52px;
+  }
+
+  .brand:hover img {
+    transform: none;
+  }
+
+  /* Hide desktop navigation */
+
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Header icons */
+
+  .header-actions {
+    margin-left: auto;
+
+    gap: 9px;
+  }
+
+  .header-actions button:nth-child(1) {
+    display: none;
+  }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .promo-bar {
+    font-size: 5.5px;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .header-actions svg {
+    width: 17px;
+    height: 17px;
+  }
+
+}

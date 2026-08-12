@@ -1,0 +1,1264 @@
+/* =========================================================
+   HOUSE OF LUCÉRA — HOME PAGE
+   Page-specific styles only
+
+   Header styles → Header.css
+   Footer styles → Footer.css
+   Global styles → Global.css
+========================================================= */
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.home-hero {
+  position: relative;
+
+  min-height: min(690px, calc(100vh - 95px));
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  background: #ddd4cc;
+}
+
+.hero-background {
+  position: absolute;
+
+  inset: 0;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.30) 40%,
+      rgba(0, 0, 0, 0.04) 75%
+    );
+}
+
+.home-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1440px, 90%);
+
+  margin: auto;
+
+  color: var(--lucera-white);
+}
+
+.hero-eyebrow {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+.home-hero-content h1 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(58px, 7vw, 105px);
+
+  font-weight: 500;
+
+  line-height: 0.83;
+
+  letter-spacing: -2px;
+}
+
+.home-hero-content p {
+  margin: 30px 0 0;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 30px;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 43px;
+
+  padding: 0 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.primary-button {
+  background: var(--lucera-white);
+
+  color: var(--lucera-black);
+}
+
+.primary-button:hover {
+  background: var(--lucera-gold);
+
+  color: var(--lucera-white);
+
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  color: var(--lucera-white);
+}
+
+.secondary-button:hover {
+  background: var(--lucera-white);
+
+  color: var(--lucera-black);
+
+  transform: translateY(-2px);
+}
+
+.hero-scroll {
+  position: absolute;
+
+  z-index: 2;
+
+  right: 5%;
+  bottom: 30px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--lucera-white);
+
+  font-size: 7px;
+
+  letter-spacing: 2px;
+
+  transform: rotate(90deg);
+
+  transform-origin: right center;
+}
+
+.hero-scroll div {
+  width: 40px;
+  height: 1px;
+
+  background: var(--lucera-white);
+}
+
+
+/* =========================================================
+   BRAND INTRODUCTION
+========================================================= */
+
+.brand-introduction {
+  width: min(700px, 88%);
+
+  margin: auto;
+
+  padding: 95px 0 90px;
+
+  text-align: center;
+}
+
+.section-label {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  color: var(--lucera-gold);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+}
+
+.section-label span {
+  width: 35px;
+  height: 1px;
+
+  background: var(--lucera-gold);
+}
+
+.brand-introduction h2 {
+  margin: 23px 0 20px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(38px, 5vw, 58px);
+
+  font-weight: 500;
+
+  line-height: 0.95;
+}
+
+.brand-introduction h2 em,
+.editorial-content h2 em,
+.flexpay-content h2 em {
+  color: var(--lucera-gold);
+
+  font-weight: 500;
+}
+
+.brand-introduction p {
+  width: min(580px, 100%);
+
+  margin: auto;
+
+  color: var(--lucera-muted);
+
+  font-size: 10px;
+
+  line-height: 2;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+  margin-bottom: 27px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.section-heading h2 {
+  margin: 8px 0 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 44px;
+
+  font-weight: 500;
+
+  line-height: 0.9;
+}
+
+.small-heading {
+  color: var(--lucera-gold);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.view-all {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.view-all:hover {
+  color: var(--lucera-gold);
+}
+
+
+/* =========================================================
+   SHOP COLLECTION
+========================================================= */
+
+.collection-section {
+  width: min(1400px, 90%);
+
+  margin: auto;
+
+  padding-bottom: 100px;
+}
+
+.collection-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 16px;
+}
+
+.collection-card {
+  position: relative;
+
+  height: 560px;
+
+  overflow: hidden;
+
+  color: var(--lucera-white);
+}
+
+.collection-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.collection-card:hover img {
+  transform: scale(1.045);
+}
+
+.collection-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.62),
+      rgba(0, 0, 0, 0.04) 65%
+    );
+}
+
+.collection-content {
+  position: absolute;
+
+  left: 35px;
+  right: 35px;
+  bottom: 35px;
+}
+
+.collection-content > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+.collection-content h3 {
+  margin: 0 0 20px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 48px;
+
+  font-weight: 500;
+
+  line-height: 0.9;
+}
+
+.collection-content > div {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding-bottom: 7px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+
+  font-size: 8px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   FEATURED PRODUCTS
+========================================================= */
+
+.featured-section {
+  padding: 95px 5% 100px;
+
+  background: var(--lucera-soft-cream);
+}
+
+.featured-section > .section-heading {
+  width: min(1400px, 100%);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-product-grid {
+  width: min(1400px, 100%);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.home-product-card {
+  min-width: 0;
+
+  display: block;
+}
+
+.home-product-image {
+  position: relative;
+
+  height: 410px;
+
+  overflow: hidden;
+
+  background: #e4d9d1;
+}
+
+.home-product-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.home-product-card:hover .home-product-image img {
+  transform: scale(1.035);
+}
+
+.product-heart {
+  position: absolute;
+
+  top: 13px;
+  right: 13px;
+
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.product-heart:hover {
+  background: var(--lucera-gold);
+
+  color: var(--lucera-white);
+}
+
+.home-product-details {
+  padding: 15px 2px 0;
+}
+
+.home-product-details > span {
+  color: var(--lucera-gold);
+
+  font-size: 6px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.3px;
+}
+
+.home-product-details h3 {
+  margin: 7px 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  line-height: 1.1;
+}
+
+.home-product-details strong {
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.mobile-view-all {
+  display: none;
+}
+
+
+/* =========================================================
+   EDITORIAL SECTION
+========================================================= */
+
+.editorial-section {
+  width: min(1400px, 90%);
+
+  min-height: 550px;
+
+  margin: 100px auto;
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  background: var(--lucera-cream);
+}
+
+.editorial-image {
+  overflow: hidden;
+}
+
+.editorial-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.editorial-section:hover .editorial-image img {
+  transform: scale(1.02);
+}
+
+.editorial-content {
+  padding: 60px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.editorial-content h2 {
+  margin: 20px 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(45px, 5vw, 65px);
+
+  font-weight: 500;
+
+  line-height: 0.9;
+}
+
+.editorial-content p {
+  max-width: 400px;
+
+  color: var(--lucera-muted);
+
+  font-size: 10px;
+
+  line-height: 2;
+}
+
+.text-button {
+  width: fit-content;
+
+  margin-top: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid var(--lucera-text);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.text-button:hover {
+  color: var(--lucera-gold);
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.benefits-section {
+  padding: 85px 5% 95px;
+
+  border-top: 1px solid var(--lucera-border);
+}
+
+.benefits-grid {
+  width: min(1200px, 100%);
+
+  margin: 55px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+}
+
+.benefit-item {
+  padding: 0 20px;
+
+  text-align: center;
+}
+
+.benefit-icon {
+  width: 53px;
+  height: 53px;
+
+  margin: auto;
+
+  display: grid;
+
+  place-items: center;
+
+  color: var(--lucera-gold);
+
+  border: 1px solid #dfcfad;
+
+  border-radius: 50%;
+}
+
+.benefit-item h3 {
+  margin: 17px 0 9px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 22px;
+
+  font-weight: 600;
+}
+
+.benefit-item p {
+  max-width: 200px;
+
+  margin: auto;
+
+  color: var(--lucera-muted);
+
+  font-size: 8px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FLEXPAY PREVIEW
+========================================================= */
+
+.flexpay-preview {
+  position: relative;
+
+  min-height: 480px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      #161411 0%,
+      #242019 55%,
+      #3c3427 100%
+    );
+
+  color: var(--lucera-white);
+}
+
+.flexpay-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1400px, 90%);
+
+  margin: auto;
+}
+
+.flexpay-content h2 {
+  margin: 18px 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(48px, 6vw, 78px);
+
+  font-weight: 500;
+
+  line-height: 0.85;
+}
+
+.flexpay-content p {
+  width: min(390px, 100%);
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 10px;
+
+  line-height: 1.9;
+}
+
+.primary-dark-button {
+  margin-top: 20px;
+
+  min-height: 42px;
+
+  padding: 0 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  background: var(--lucera-white);
+
+  color: var(--lucera-black);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.primary-dark-button:hover {
+  background: var(--lucera-gold);
+
+  color: var(--lucera-white);
+
+  transform: translateY(-2px);
+}
+
+.flexpay-decoration {
+  position: absolute;
+
+  top: 50%;
+  right: 5%;
+
+  width: 430px;
+  height: 430px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid rgba(203, 168, 95, 0.4);
+
+  border-radius: 50%;
+
+  transform: translateY(-50%);
+}
+
+.flexpay-decoration::before,
+.flexpay-decoration::after {
+  content: "";
+
+  position: absolute;
+
+  border: 1px solid rgba(203, 168, 95, 0.25);
+
+  border-radius: 50%;
+}
+
+.flexpay-decoration::before {
+  width: 340px;
+  height: 340px;
+}
+
+.flexpay-decoration::after {
+  width: 250px;
+  height: 250px;
+}
+
+.flexpay-decoration span {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 120px;
+
+  color: rgba(203, 168, 95, 0.45);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  /* -----------------------------------------
+     HERO
+  ----------------------------------------- */
+
+  .home-hero {
+    min-height: 600px;
+  }
+
+
+  /* -----------------------------------------
+     COLLECTION
+  ----------------------------------------- */
+
+  .collection-card {
+    height: 470px;
+  }
+
+  .collection-content h3 {
+    font-size: 40px;
+  }
+
+
+  /* -----------------------------------------
+     PRODUCTS
+  ----------------------------------------- */
+
+  .home-product-image {
+    height: 330px;
+  }
+
+
+  /* -----------------------------------------
+     EDITORIAL
+  ----------------------------------------- */
+
+  .editorial-content {
+    padding: 40px;
+  }
+
+
+  /* -----------------------------------------
+     BENEFITS
+  ----------------------------------------- */
+
+  .benefits-grid {
+    gap: 10px;
+  }
+
+  .benefit-item {
+    padding: 0 8px;
+  }
+
+
+  /* -----------------------------------------
+     FLEXPAY
+  ----------------------------------------- */
+
+  .flexpay-decoration {
+    width: 330px;
+    height: 330px;
+  }
+
+  .flexpay-decoration::before {
+    width: 260px;
+    height: 260px;
+  }
+
+  .flexpay-decoration::after {
+    width: 190px;
+    height: 190px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* -----------------------------------------
+     HERO
+  ----------------------------------------- */
+
+  .home-hero {
+    min-height: 620px;
+
+    align-items: flex-end;
+  }
+
+  .hero-background img {
+    object-position: 65% center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.2) 70%
+      );
+  }
+
+  .home-hero-content {
+    width: 90%;
+
+    padding-bottom: 70px;
+  }
+
+  .hero-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+  }
+
+  .home-hero-content h1 {
+    font-size: clamp(52px, 16vw, 75px);
+
+    letter-spacing: -1px;
+  }
+
+  .home-hero-content p {
+    margin-top: 20px;
+
+    font-size: 9px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .hero-buttons {
+    width: 190px;
+
+    margin-top: 25px;
+
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+
+    min-height: 42px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+
+  /* -----------------------------------------
+     INTRODUCTION
+  ----------------------------------------- */
+
+  .brand-introduction {
+    padding: 70px 0;
+  }
+
+  .brand-introduction h2 {
+    font-size: 40px;
+  }
+
+  .brand-introduction p {
+    font-size: 9px;
+
+    line-height: 1.9;
+  }
+
+
+  /* -----------------------------------------
+     COLLECTION
+  ----------------------------------------- */
+
+  .collection-section {
+    width: 92%;
+
+    padding-bottom: 70px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 38px;
+  }
+
+  .desktop-view-all {
+    display: none;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .collection-card {
+    height: 480px;
+  }
+
+  .collection-content {
+    left: 23px;
+    right: 23px;
+    bottom: 25px;
+  }
+
+  .collection-content h3 {
+    font-size: 42px;
+  }
+
+
+  /* -----------------------------------------
+     FEATURED PRODUCTS
+  ----------------------------------------- */
+
+  .featured-section {
+    padding: 70px 4% 75px;
+  }
+
+  .home-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+  }
+
+  .home-product-image {
+    height: 250px;
+  }
+
+  .home-product-details h3 {
+    font-size: 17px;
+  }
+
+  .mobile-view-all {
+    width: fit-content;
+
+    margin: 30px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid #222;
+
+    font-size: 8px;
+
+    font-weight: 600;
+  }
+
+
+  /* -----------------------------------------
+     EDITORIAL
+  ----------------------------------------- */
+
+  .editorial-section {
+    width: 100%;
+
+    min-height: auto;
+
+    margin: 0;
+
+    grid-template-columns: 1fr;
+  }
+
+  .editorial-image {
+    height: 420px;
+  }
+
+  .editorial-content {
+    padding: 55px 7%;
+  }
+
+  .editorial-content h2 {
+    font-size: 49px;
+  }
+
+  .editorial-content p {
+    font-size: 9px;
+  }
+
+
+  /* -----------------------------------------
+     BENEFITS
+  ----------------------------------------- */
+
+  .benefits-section {
+    padding: 70px 5%;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px 10px;
+
+    margin-top: 45px;
+  }
+
+  .benefit-item {
+    padding: 0 5px;
+  }
+
+  .benefit-item h3 {
+    font-size: 18px;
+  }
+
+  .benefit-item p {
+    font-size: 7px;
+  }
+
+
+  /* -----------------------------------------
+     FLEXPAY
+  ----------------------------------------- */
+
+  .flexpay-preview {
+    min-height: 520px;
+  }
+
+  .flexpay-content {
+    width: 90%;
+
+    padding-bottom: 180px;
+  }
+
+  .flexpay-content h2 {
+    font-size: 56px;
+  }
+
+  .flexpay-decoration {
+    width: 260px;
+    height: 260px;
+
+    right: -35px;
+
+    top: auto;
+    bottom: -100px;
+
+    transform: none;
+  }
+
+  .flexpay-decoration::before {
+    width: 205px;
+    height: 205px;
+  }
+
+  .flexpay-decoration::after {
+    width: 150px;
+    height: 150px;
+  }
+
+  .flexpay-decoration span {
+    font-size: 75px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .home-hero-content h1 {
+    font-size: 51px;
+  }
+
+  .collection-card {
+    height: 420px;
+  }
+
+  .home-product-image {
+    height: 220px;
+  }
+
+  .home-product-details h3 {
+    font-size: 15px;
+  }
+
+  .benefits-grid {
+    gap: 30px 5px;
+  }
+
+  .benefit-item h3 {
+    font-size: 16px;
+  }
+}

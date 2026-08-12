@@ -1,0 +1,1876 @@
+/* =========================================================
+   HOUSE OF LUCÉRA
+   LUXURY HAIR PRODUCT DETAILS
+========================================================= */
+
+.hair-product-page {
+  background: #fff;
+  color: var(--lucera-black, #171513);
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.hair-breadcrumb {
+  width: min(1400px, 90%);
+  margin: auto;
+
+  padding: 22px 0 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: #77716c;
+
+  font-size: 8px;
+}
+
+.hair-breadcrumb a {
+  transition: color 0.2s ease;
+}
+
+.hair-breadcrumb a:hover {
+  color: var(--lucera-gold, #b9974b);
+}
+
+.hair-breadcrumb span:nth-child(even) {
+  color: #b5ada5;
+}
+
+
+/* =========================================================
+   MAIN PRODUCT
+========================================================= */
+
+.hair-product-main {
+  width: min(1400px, 90%);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.08fr) minmax(400px, 0.92fr);
+
+  gap: 65px;
+
+  padding-bottom: 95px;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.hair-gallery {
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns: 82px minmax(0, 1fr);
+
+  gap: 13px;
+
+  align-items: start;
+}
+
+.hair-thumbnails {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.hair-thumbnail {
+  width: 82px;
+  height: 105px;
+
+  padding: 0;
+
+  border: 1px solid transparent;
+
+  background: #f3ece6;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.25s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.hair-thumbnail:hover {
+  border-color: #b9a177;
+
+  transform: translateY(-2px);
+}
+
+.hair-thumbnail.active {
+  border-color: var(--lucera-gold, #b9974b);
+}
+
+.hair-thumbnail img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.hair-thumbnail:hover img {
+  transform: scale(1.04);
+}
+
+
+/* Main image */
+
+.hair-main-image {
+  position: relative;
+
+  height: 625px;
+
+  overflow: hidden;
+
+  background: #eee3db;
+}
+
+.hair-main-image > img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.hair-main-image:hover > img {
+  transform: scale(1.015);
+}
+
+.hair-wishlist {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  width: 43px;
+  height: 43px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  color: #55504b;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.hair-wishlist:hover,
+.hair-wishlist.active {
+  background: var(--lucera-gold, #b9974b);
+
+  color: #fff;
+
+  transform: scale(1.06);
+}
+
+.hair-image-badge {
+  position: absolute;
+
+  left: 18px;
+  bottom: 18px;
+
+  padding: 9px 12px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  color: #28231f;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
+
+.hair-product-information {
+  padding-top: 3px;
+
+  min-width: 0;
+}
+
+.hair-product-category {
+  color: var(--lucera-gold, #b9974b);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.hair-product-information h1 {
+  margin: 12px 0 12px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(45px, 4.5vw, 64px);
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   RATING
+========================================================= */
+
+.hair-rating {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #68625d;
+
+  font-size: 8px;
+}
+
+.hair-stars {
+  display: flex;
+
+  gap: 2px;
+
+  color: var(--lucera-gold, #b9974b);
+}
+
+.rating-divider {
+  color: #c7c1bc;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.hair-price-block {
+  margin-top: 23px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.hair-price-block strong {
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+.hair-price-block span {
+  color: #77716d;
+
+  font-size: 8px;
+}
+
+.hair-price-block b {
+  color: #514a45;
+
+  font-weight: 600;
+}
+
+.hair-divider {
+  height: 1px;
+
+  margin: 25px 0;
+
+  background: #e9e4df;
+}
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.hair-option {
+  margin-bottom: 24px;
+}
+
+.hair-option-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 11px;
+}
+
+.hair-option-header strong {
+  font-size: 8px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.hair-option-header span {
+  color: #77716c;
+
+  font-size: 8px;
+}
+
+
+/* Length */
+
+.hair-option-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.hair-option-buttons button {
+  min-width: 48px;
+
+  height: 34px;
+
+  padding: 0 10px;
+
+  border: 1px solid #ddd6cf;
+
+  background: #fff;
+
+  color: #3b3632;
+
+  font-size: 8px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hair-option-buttons button:hover {
+  border-color: var(--lucera-gold, #b9974b);
+
+  transform: translateY(-1px);
+}
+
+.hair-option-buttons button.selected {
+  border-color: #171513;
+
+  background: #171513;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   TEXTURE SELECT
+========================================================= */
+
+.hair-texture-select {
+  position: relative;
+}
+
+.hair-texture-select > button {
+  width: 100%;
+
+  height: 39px;
+
+  padding: 0 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border: 1px solid #ddd6cf;
+
+  background: #fff;
+
+  color: #292521;
+
+  font-size: 8px;
+
+  cursor: pointer;
+}
+
+.hair-texture-options {
+  display: none;
+
+  position: absolute;
+
+  z-index: 10;
+
+  left: 0;
+  right: 0;
+
+  top: calc(100% + 4px);
+
+  padding: 5px;
+
+  background: #fff;
+
+  border: 1px solid #ded8d2;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hair-texture-select:hover .hair-texture-options {
+  display: block;
+}
+
+.hair-texture-options button {
+  width: 100%;
+
+  padding: 9px 10px;
+
+  text-align: left;
+
+  border: 0;
+
+  background: transparent;
+
+  font-size: 8px;
+
+  cursor: pointer;
+}
+
+.hair-texture-options button:hover {
+  background: #f8f3ef;
+
+  color: var(--lucera-gold, #b9974b);
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+.hair-color-options {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.hair-color-options button {
+  min-height: 34px;
+
+  padding: 0 11px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  border: 1px solid #ded8d2;
+
+  background: #fff;
+
+  color: #403a35;
+
+  font-size: 8px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.hair-color-options button:hover {
+  border-color: var(--lucera-gold, #b9974b);
+}
+
+.hair-color-options button.selected {
+  border-color: #171513;
+
+  background: #faf7f4;
+}
+
+.hair-color-swatch {
+  width: 16px;
+  height: 16px;
+
+  flex: 0 0 16px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(0, 0, 0, 0.15);
+
+  background: #191613;
+}
+
+.hair-color-swatch.natural-black {
+  background: #171513;
+}
+
+.hair-color-swatch.jet-black {
+  background: #050505;
+}
+
+.hair-color-swatch.dark-brown {
+  background: #3c2419;
+}
+
+
+/* =========================================================
+   QUANTITY / TOTAL
+========================================================= */
+
+.hair-purchase-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 28px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #e9e4df;
+}
+
+.hair-quantity {
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  border: 1px solid #ddd6cf;
+}
+
+.hair-quantity button {
+  width: 38px;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+
+  background: #fff;
+
+  color: #4d4742;
+}
+
+.hair-quantity button:hover {
+  color: var(--lucera-gold, #b9974b);
+}
+
+.hair-quantity span {
+  width: 35px;
+
+  text-align: center;
+
+  font-size: 9px;
+}
+
+.hair-selected-total {
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.hair-actions {
+  margin-top: 16px;
+
+  display: grid;
+
+  grid-template-columns: 1.25fr 0.75fr;
+
+  gap: 8px;
+}
+
+.hair-add-cart,
+.hair-buy-now {
+  height: 49px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  border: 1px solid #171513;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.hair-add-cart {
+  background: #171513;
+
+  color: #fff;
+}
+
+.hair-add-cart:hover {
+  background: var(--lucera-gold, #b9974b);
+
+  border-color: var(--lucera-gold, #b9974b);
+
+  transform: translateY(-2px);
+}
+
+.hair-buy-now {
+  background: #fff;
+
+  color: #171513;
+}
+
+.hair-buy-now:hover {
+  background: #171513;
+
+  color: #fff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FLEXPAY
+========================================================= */
+
+.hair-flexpay {
+  margin-top: 14px;
+
+  min-height: 72px;
+
+  padding: 13px;
+
+  display: grid;
+
+  grid-template-columns: 35px 1fr auto;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background: #f8f4f0;
+
+  border: 1px solid #e8dfd7;
+}
+
+.hair-flexpay-mark {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #1a1815;
+
+  color: var(--lucera-gold, #b9974b);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 14px;
+}
+
+.hair-flexpay strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 7px;
+
+  letter-spacing: 1px;
+}
+
+.hair-flexpay p {
+  margin: 0;
+
+  color: #716a64;
+
+  font-size: 7px;
+
+  line-height: 1.5;
+}
+
+.hair-flexpay a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #4d453e;
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.hair-flexpay a:hover {
+  color: var(--lucera-gold, #b9974b);
+}
+
+
+/* =========================================================
+   SERVICE LIST
+========================================================= */
+
+.hair-service-list {
+  margin-top: 24px;
+
+  border-top: 1px solid #e9e4df;
+}
+
+.hair-service {
+  min-height: 66px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  border-bottom: 1px solid #eee9e5;
+}
+
+.hair-service > svg {
+  flex: 0 0 auto;
+
+  color: var(--lucera-gold, #b9974b);
+}
+
+.hair-service strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 8px;
+}
+
+.hair-service span {
+  display: block;
+
+  color: #77716c;
+
+  font-size: 7px;
+}
+
+
+/* =========================================================
+   AGENT
+========================================================= */
+
+.hair-agent {
+  margin-top: 18px;
+
+  padding: 13px;
+
+  display: grid;
+
+  grid-template-columns: 34px 1fr auto;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border: 1px solid #e3dcd5;
+
+  background: #fff;
+}
+
+.hair-agent-icon {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #f5ede6;
+
+  color: var(--lucera-gold, #b9974b);
+}
+
+.hair-agent strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 7px;
+}
+
+.hair-agent span {
+  color: #77716c;
+
+  font-size: 6.5px;
+}
+
+.hair-agent button {
+  height: 29px;
+
+  padding: 0 11px;
+
+  border: 1px solid #1b1917;
+
+  background: #fff;
+
+  color: #1b1917;
+
+  font-size: 6px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.hair-agent button:hover {
+  background: #1b1917;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   PRODUCT TABS
+========================================================= */
+
+.hair-product-tabs {
+  border-top: 1px solid #e8e2dc;
+
+  background: #fbf8f5;
+}
+
+.hair-tabs-navigation {
+  width: min(1400px, 90%);
+
+  margin: auto;
+
+  display: flex;
+
+  gap: 35px;
+
+  border-bottom: 1px solid #e4ddd6;
+}
+
+.hair-tabs-navigation button {
+  position: relative;
+
+  height: 56px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #77716c;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}
+
+.hair-tabs-navigation button::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -1px;
+
+  height: 1px;
+
+  background: var(--lucera-gold, #b9974b);
+
+  transform: scaleX(0);
+
+  transition: transform 0.25s ease;
+}
+
+.hair-tabs-navigation button.active {
+  color: #171513;
+}
+
+.hair-tabs-navigation button.active::after {
+  transform: scaleX(1);
+}
+
+.hair-tab-content {
+  width: min(1400px, 90%);
+
+  margin: auto;
+
+  padding: 55px 0 70px;
+}
+
+
+/* Description */
+
+.hair-description {
+  max-width: 750px;
+}
+
+.hair-description h2 {
+  margin: 0 0 18px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 38px;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+.hair-description p {
+  margin: 0 0 15px;
+
+  color: #6e6862;
+
+  font-size: 9px;
+
+  line-height: 2;
+}
+
+
+/* Details */
+
+.hair-details-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1px;
+
+  background: #e5ded7;
+}
+
+.hair-details-grid > div {
+  min-height: 100px;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  background: #fff;
+}
+
+.hair-details-grid span {
+  color: var(--lucera-gold, #b9974b);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.hair-details-grid strong {
+  font-size: 9px;
+
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+
+/* Shipping */
+
+.hair-shipping-content {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 40px;
+}
+
+.hair-shipping-content > div {
+  padding-right: 30px;
+
+  border-right: 1px solid #ded7d0;
+}
+
+.hair-shipping-content > div:last-child {
+  border-right: 0;
+}
+
+.hair-shipping-content svg {
+  color: var(--lucera-gold, #b9974b);
+}
+
+.hair-shipping-content h3 {
+  margin: 15px 0 8px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 22px;
+
+  font-weight: 600;
+}
+
+.hair-shipping-content p {
+  margin: 0;
+
+  color: #6e6862;
+
+  font-size: 8px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   RELATED PRODUCTS
+========================================================= */
+
+.hair-related-section {
+  width: min(1400px, 90%);
+
+  margin: auto;
+
+  padding: 95px 0;
+}
+
+.hair-section-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.hair-section-heading > div > span {
+  color: var(--lucera-gold, #b9974b);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.hair-section-heading h2 {
+  margin: 8px 0 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 43px;
+
+  font-weight: 500;
+
+  line-height: 0.9;
+}
+
+.hair-section-heading > a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 7px;
+
+  font-weight: 700;
+}
+
+.hair-section-heading > a:hover {
+  color: var(--lucera-gold, #b9974b);
+}
+
+.hair-related-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.hair-related-card {
+  min-width: 0;
+}
+
+.hair-related-image {
+  position: relative;
+
+  height: 350px;
+
+  overflow: hidden;
+
+  background: #eee3db;
+}
+
+.hair-related-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.55s ease;
+}
+
+.hair-related-card:hover .hair-related-image img {
+  transform: scale(1.04);
+}
+
+.hair-related-image > span {
+  position: absolute;
+
+  left: 10px;
+  bottom: 10px;
+
+  padding: 6px 8px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  color: #33302c;
+
+  font-size: 6px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.hair-related-info {
+  padding: 13px 2px;
+}
+
+.hair-related-info h3 {
+  margin: 0 0 7px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+.hair-related-info > strong {
+  font-size: 9px;
+}
+
+.hair-related-rating {
+  margin-top: 7px;
+
+  display: flex;
+
+  gap: 5px;
+
+  align-items: center;
+
+  font-size: 7px;
+}
+
+.hair-related-rating span {
+  color: var(--lucera-gold, #b9974b);
+
+  letter-spacing: 1px;
+}
+
+.hair-related-rating small {
+  color: #77716c;
+
+  font-size: 6px;
+}
+
+
+/* =========================================================
+   CARE BANNER
+========================================================= */
+
+.hair-care-banner {
+  min-height: 400px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      #181613 0%,
+      #242019 55%,
+      #352e25 100%
+    );
+
+  color: #fff;
+}
+
+.hair-care-content {
+  width: min(1400px, 90%);
+
+  margin: auto;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.hair-care-content > span {
+  color: var(--lucera-gold, #b9974b);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+.hair-care-content h2 {
+  margin: 16px 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(48px, 6vw, 72px);
+
+  font-weight: 500;
+
+  line-height: 0.88;
+}
+
+.hair-care-content h2 em {
+  color: var(--lucera-gold, #b9974b);
+
+  font-weight: 500;
+}
+
+.hair-care-content p {
+  width: min(410px, 100%);
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 9px;
+
+  line-height: 1.9;
+}
+
+.hair-care-content > a {
+  margin-top: 25px;
+
+  width: fit-content;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-height: 40px;
+
+  padding: 0 17px;
+
+  background: #fff;
+
+  color: #171513;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.hair-care-content > a:hover {
+  background: var(--lucera-gold, #b9974b);
+
+  color: #fff;
+
+  transform: translateY(-2px);
+}
+
+.hair-care-mark {
+  position: absolute;
+
+  right: 7%;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 360px;
+  height: 360px;
+
+  border: 1px solid rgba(203, 168, 95, 0.35);
+
+  border-radius: 50%;
+
+  display: grid;
+
+  place-items: center;
+}
+
+.hair-care-mark::before,
+.hair-care-mark::after {
+  content: "";
+
+  position: absolute;
+
+  border: 1px solid rgba(203, 168, 95, 0.2);
+
+  border-radius: 50%;
+}
+
+.hair-care-mark::before {
+  width: 275px;
+  height: 275px;
+}
+
+.hair-care-mark::after {
+  width: 195px;
+  height: 195px;
+}
+
+.hair-care-mark span {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 100px;
+
+  color: rgba(203, 168, 95, 0.4);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hair-product-main {
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.85fr);
+
+    gap: 35px;
+  }
+
+  .hair-main-image {
+    height: 540px;
+  }
+
+  .hair-thumbnail {
+    width: 68px;
+    height: 88px;
+  }
+
+  .hair-gallery {
+    grid-template-columns: 68px minmax(0, 1fr);
+  }
+
+  .hair-product-information h1 {
+    font-size: 48px;
+  }
+
+  .hair-related-image {
+    height: 280px;
+  }
+
+  .hair-care-mark {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hair-care-mark::before {
+    width: 230px;
+    height: 230px;
+  }
+
+  .hair-care-mark::after {
+    width: 165px;
+    height: 165px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .hair-breadcrumb {
+    width: 92%;
+
+    padding: 15px 0;
+
+    font-size: 7px;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+  }
+
+
+  /* Product */
+
+  .hair-product-main {
+    width: 92%;
+
+    display: block;
+
+    padding-bottom: 65px;
+  }
+
+
+  /* Gallery */
+
+  .hair-gallery {
+    display: flex;
+
+    flex-direction: column-reverse;
+
+    gap: 10px;
+  }
+
+  .hair-main-image {
+    width: 100%;
+
+    height: 470px;
+  }
+
+  .hair-thumbnails {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 7px;
+  }
+
+  .hair-thumbnail {
+    width: 100%;
+
+    height: 92px;
+  }
+
+
+  /* Information */
+
+  .hair-product-information {
+    padding-top: 38px;
+  }
+
+  .hair-product-information h1 {
+    margin-top: 10px;
+
+    font-size: 48px;
+
+    line-height: 0.88;
+  }
+
+  .hair-price-block strong {
+    font-size: 19px;
+  }
+
+  .hair-divider {
+    margin: 22px 0;
+  }
+
+
+  /* Options */
+
+  .hair-option {
+    margin-bottom: 21px;
+  }
+
+  .hair-color-options {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  /* Purchase */
+
+  .hair-purchase-row {
+    margin-top: 24px;
+  }
+
+  .hair-actions {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .hair-add-cart,
+  .hair-buy-now {
+    height: 48px;
+  }
+
+
+  /* Flexpay */
+
+  .hair-flexpay {
+    grid-template-columns: 34px 1fr;
+
+    position: relative;
+
+    padding-right: 75px;
+  }
+
+  .hair-flexpay > a {
+    position: absolute;
+
+    right: 12px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+  }
+
+
+  /* Agent */
+
+  .hair-agent {
+    grid-template-columns: 34px 1fr;
+  }
+
+  .hair-agent button {
+    grid-column: 1 / -1;
+
+    width: 100%;
+  }
+
+
+  /* Tabs */
+
+  .hair-tabs-navigation {
+    width: 92%;
+
+    gap: 22px;
+
+    overflow-x: auto;
+  }
+
+  .hair-tabs-navigation button {
+    flex: 0 0 auto;
+
+    height: 52px;
+
+    font-size: 6.5px;
+  }
+
+  .hair-tab-content {
+    width: 92%;
+
+    padding: 40px 0 55px;
+  }
+
+  .hair-description h2 {
+    font-size: 33px;
+  }
+
+  .hair-description p {
+    font-size: 8px;
+  }
+
+
+  /* Details */
+
+  .hair-details-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hair-details-grid > div {
+    min-height: 90px;
+
+    padding: 15px;
+  }
+
+
+  /* Shipping */
+
+  .hair-shipping-content {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .hair-shipping-content > div {
+    padding: 0 0 25px;
+
+    border-right: 0;
+
+    border-bottom: 1px solid #ded7d0;
+  }
+
+  .hair-shipping-content > div:last-child {
+    border-bottom: 0;
+  }
+
+
+  /* Related */
+
+  .hair-related-section {
+    width: 92%;
+
+    padding: 65px 0;
+  }
+
+  .hair-section-heading {
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .hair-section-heading h2 {
+    font-size: 36px;
+  }
+
+  .hair-section-heading > a {
+    padding-top: 17px;
+
+    white-space: nowrap;
+  }
+
+  .hair-related-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px 10px;
+  }
+
+  .hair-related-image {
+    height: 270px;
+  }
+
+  .hair-related-info h3 {
+    font-size: 18px;
+  }
+
+
+  /* Care */
+
+  .hair-care-banner {
+    min-height: 500px;
+  }
+
+  .hair-care-content {
+    width: 92%;
+
+    align-self: flex-start;
+
+    padding-top: 65px;
+  }
+
+  .hair-care-content h2 {
+    font-size: 52px;
+  }
+
+  .hair-care-mark {
+    width: 260px;
+    height: 260px;
+
+    right: -70px;
+
+    top: auto;
+
+    bottom: -100px;
+
+    transform: none;
+  }
+
+  .hair-care-mark::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hair-care-mark::after {
+    width: 145px;
+    height: 145px;
+  }
+
+  .hair-care-mark span {
+    font-size: 72px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .hair-main-image {
+    height: 390px;
+  }
+
+  .hair-thumbnail {
+    height: 76px;
+  }
+
+  .hair-product-information h1 {
+    font-size: 42px;
+  }
+
+  .hair-product-category {
+    font-size: 7px;
+  }
+
+  .hair-rating {
+    font-size: 7px;
+  }
+
+  .hair-price-block strong {
+    font-size: 17px;
+  }
+
+  .hair-option-buttons {
+    gap: 5px;
+  }
+
+  .hair-option-buttons button {
+    min-width: 44px;
+
+    height: 32px;
+  }
+
+  .hair-color-options {
+    grid-template-columns: 1fr;
+  }
+
+  .hair-selected-total {
+    font-size: 13px;
+  }
+
+  .hair-flexpay {
+    padding-right: 13px;
+
+    grid-template-columns: 34px 1fr;
+  }
+
+  .hair-flexpay > a {
+    position: static;
+
+    grid-column: 2;
+
+    transform: none;
+
+    justify-self: start;
+
+    margin-top: 4px;
+  }
+
+  .hair-related-grid {
+    gap: 15px 8px;
+  }
+
+  .hair-related-image {
+    height: 220px;
+  }
+
+  .hair-related-info h3 {
+    font-size: 16px;
+  }
+
+  .hair-care-content h2 {
+    font-size: 45px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hair-product-page *,
+  .hair-product-page *::before,
+  .hair-product-page *::after {
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+  }
+}

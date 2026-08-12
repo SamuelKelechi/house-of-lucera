@@ -1,0 +1,1615 @@
+/* =========================================================
+   HOUSE OF LUCÉRA
+   LUXURY HAIR COLLECTION
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap");
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+.hair-page {
+  --hair-black: #111111;
+  --hair-gold: #b9974b;
+  --hair-light-gold: #c9aa65;
+  --hair-cream: #f5ede6;
+  --hair-soft: #faf7f4;
+  --hair-border: #e7e1dc;
+  --hair-text: #171717;
+  --hair-muted: #6d6965;
+  --hair-white: #ffffff;
+
+  color: var(--hair-text);
+  background: #fff;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.hair-page *,
+.hair-page *::before,
+.hair-page *::after {
+  box-sizing: border-box;
+}
+
+.hair-page button,
+.hair-page select {
+  font: inherit;
+}
+
+.hair-page button {
+  cursor: pointer;
+}
+
+.hair-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hair-page img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hair-hero {
+  min-height: 188px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f5ede6 0%,
+      #f5ede6 60%,
+      #eee3da 100%
+    );
+}
+
+.hair-hero-content {
+  width: min(1440px, 92%);
+
+  margin: auto;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+.hair-breadcrumb {
+  position: absolute;
+
+  top: -72px;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 7px;
+
+  color: #383431;
+}
+
+.hair-breadcrumb span {
+  color: #9b948e;
+}
+
+.hair-breadcrumb a:hover {
+  color: var(--hair-gold);
+}
+
+.hair-hero-copy {
+  padding-top: 22px;
+}
+
+.hair-eyebrow {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--hair-gold);
+
+  font-size: 6px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.hair-hero-copy h1 {
+  margin: 0 0 10px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: clamp(34px, 4vw, 54px);
+
+  font-weight: 600;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.5px;
+}
+
+.hair-hero-copy p {
+  margin: 0;
+
+  color: #3e3935;
+
+  font-size: 9px;
+
+  line-height: 1.8;
+}
+
+.hair-hero-image {
+  position: absolute;
+
+  right: 8%;
+  bottom: 0;
+
+  width: 34%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.hair-hero-image img {
+  width: 100%;
+  height: 135%;
+
+  object-fit: cover;
+
+  object-position: center top;
+
+  mix-blend-mode: multiply;
+
+  filter:
+    saturate(0.95)
+    contrast(1.02);
+
+  transition:
+    transform 0.7s
+    cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.hair-hero:hover .hair-hero-image img {
+  transform: scale(1.025);
+}
+
+
+/* =========================================================
+   FILTER BAR
+========================================================= */
+
+.hair-filter-bar {
+  border-bottom: 1px solid #eee9e5;
+
+  background: #fff;
+}
+
+.hair-filter-inner {
+  width: min(1440px, 92%);
+
+  min-height: 65px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.hair-filter {
+  position: relative;
+
+  min-width: 108px;
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 10px;
+
+  border: 1px solid #e4dfda;
+
+  border-radius: 3px;
+
+  background: #fff;
+
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.hair-filter:hover {
+  border-color: var(--hair-gold);
+
+  color: var(--hair-gold);
+}
+
+.hair-filter span {
+  font-size: 7px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.hair-filter select {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  cursor: pointer;
+}
+
+.hair-filter svg {
+  margin-left: auto;
+
+  pointer-events: none;
+}
+
+.mobile-filter-toggle {
+  display: none;
+
+  height: 31px;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 12px;
+
+  border: 1px solid #e4dfda;
+
+  background: #fff;
+
+  border-radius: 3px;
+
+  font-size: 7px;
+}
+
+
+/* =========================================================
+   MOBILE FILTER PANEL
+========================================================= */
+
+.mobile-filter-panel {
+  display: none;
+}
+
+
+/* =========================================================
+   CATALOG
+========================================================= */
+
+.hair-catalog {
+  width: min(1440px, 92%);
+
+  margin: 22px auto 0;
+
+  display: grid;
+
+  grid-template-columns: 160px 1fr;
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.hair-sidebar {
+  min-width: 0;
+}
+
+.hair-sidebar-section {
+  padding-bottom: 18px;
+
+  margin-bottom: 18px;
+
+  border-bottom: 1px solid #ece8e4;
+}
+
+.hair-sidebar-section h3 {
+  margin: 0 0 13px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+.hair-category-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.hair-category-links button {
+  width: fit-content;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #2b2825;
+
+  font-size: 7px;
+
+  text-align: left;
+
+  transition:
+    color 0.25s ease,
+    padding-left 0.25s ease;
+}
+
+.hair-category-links button:hover {
+  color: var(--hair-gold);
+
+  padding-left: 4px;
+}
+
+.hair-category-links button.selected {
+  color: var(--hair-gold);
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SIDEBAR NOTE
+========================================================= */
+
+.hair-sidebar-note {
+  padding: 15px 11px;
+
+  border: 1px solid #e8dfd6;
+
+  background: #faf7f3;
+
+  text-align: center;
+
+  color: var(--hair-gold);
+}
+
+.hair-sidebar-note svg {
+  margin: 0 auto 9px;
+}
+
+.hair-sidebar-note strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #27231f;
+
+  font-size: 6px;
+
+  letter-spacing: 1px;
+}
+
+.hair-sidebar-note p {
+  margin: 0;
+
+  color: #716a64;
+
+  font-size: 6px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PRODUCTS AREA
+========================================================= */
+
+.hair-products-area {
+  min-width: 0;
+}
+
+.hair-products-header {
+  min-height: 24px;
+
+  margin-bottom: 9px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+}
+
+.hair-products-header > strong {
+  font-size: 7px;
+
+  font-weight: 500;
+}
+
+.hair-view-controls {
+  display: flex;
+
+  gap: 4px;
+}
+
+.hair-view-controls button {
+  width: 18px;
+  height: 18px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #99918a;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hair-view-controls button:hover {
+  color: var(--hair-gold);
+
+  transform: translateY(-1px);
+}
+
+.hair-view-controls button.active {
+  color: var(--hair-gold);
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.hair-product-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 15px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.hair-product-card {
+  min-width: 0;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid #e4dfdb;
+
+  border-radius: 4px;
+
+  background: #fff;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.hair-product-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #d8c7a8;
+
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.hair-product-image {
+  height: 178px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: block;
+
+  background: #eee5de;
+}
+
+.hair-product-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.13),
+      transparent 48%
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+}
+
+.hair-product-card:hover
+.hair-product-image::after {
+  opacity: 1;
+}
+
+.hair-product-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.65s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hair-product-card:hover
+.hair-product-image img {
+  transform: scale(1.07);
+}
+
+
+/* =========================================================
+   PRODUCT BADGE
+========================================================= */
+
+.hair-product-badge {
+  position: absolute;
+
+  left: 8px;
+  top: 8px;
+
+  z-index: 2;
+
+  padding: 5px 6px;
+
+  background: var(--hair-gold);
+
+  color: #fff;
+
+  font-size: 5px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+
+/* =========================================================
+   WISHLIST
+========================================================= */
+
+.hair-wishlist {
+  position: absolute;
+
+  z-index: 4;
+
+  right: 8px;
+  top: 8px;
+
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.93);
+
+  color: #746d67;
+
+  opacity: 0;
+
+  transform: translateY(-5px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.hair-product-card:hover .hair-wishlist {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.hair-wishlist:hover {
+  color: var(--hair-gold);
+
+  background: #fff;
+
+  transform: scale(1.1) !important;
+}
+
+
+/* =========================================================
+   PRODUCT INFO
+========================================================= */
+
+.hair-product-info {
+  padding: 9px 8px 10px;
+}
+
+.hair-product-category {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--hair-gold);
+
+  font-size: 5px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.hair-product-info h2 {
+  margin: 0 0 7px;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  transition: color 0.2s ease;
+}
+
+.hair-product-info h2:hover {
+  color: var(--hair-gold);
+}
+
+.hair-product-price {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 9px;
+}
+
+.hair-installment {
+  display: block;
+
+  color: #77716c;
+
+  font-size: 6px;
+}
+
+.hair-product-bottom {
+  margin-top: 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.hair-rating {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #635d57;
+
+  font-size: 6px;
+}
+
+.hair-stars {
+  display: flex;
+
+  gap: 1px;
+
+  color: #c19b48;
+}
+
+.hair-add-button {
+  width: 17px;
+  height: 17px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: #0c0c0c;
+
+  color: #fff;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hair-add-button:hover {
+  background: var(--hair-gold);
+
+  transform: scale(1.16);
+
+  box-shadow:
+    0 5px 13px rgba(185, 151, 75, 0.3);
+}
+
+
+/* =========================================================
+   LIST VIEW
+========================================================= */
+
+.hair-product-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.hair-product-list .hair-product-card {
+  display: grid;
+
+  grid-template-columns: 180px 1fr;
+}
+
+.hair-product-list .hair-product-image {
+  height: 210px;
+}
+
+.hair-product-list .hair-product-info {
+  padding: 25px;
+}
+
+.hair-product-list .hair-product-bottom {
+  max-width: 350px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.no-products {
+  min-height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 40px;
+
+  border: 1px solid var(--hair-border);
+
+  background: var(--hair-soft);
+
+  text-align: center;
+
+  color: var(--hair-gold);
+}
+
+.no-products h2 {
+  margin: 15px 0 7px;
+
+  color: var(--hair-text);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 34px;
+
+  font-weight: 500;
+}
+
+.no-products p {
+  max-width: 350px;
+
+  margin: 0;
+
+  color: var(--hair-muted);
+
+  font-size: 8px;
+
+  line-height: 1.8;
+}
+
+.no-products button {
+  margin-top: 20px;
+
+  min-height: 34px;
+
+  padding: 0 17px;
+
+  border: 0;
+
+  background: var(--hair-black);
+
+  color: #fff;
+
+  font-size: 7px;
+
+  font-weight: 600;
+}
+
+.no-products button:hover {
+  background: var(--hair-gold);
+}
+
+
+/* =========================================================
+   AGENT BANNER
+========================================================= */
+
+.hair-agent-banner {
+  width: min(1400px, 92%);
+
+  min-height: 150px;
+
+  margin: 24px auto 0;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+
+  background:
+    linear-gradient(
+      90deg,
+      #111 0%,
+      #171717 55%,
+      #252019 100%
+    );
+
+  color: #fff;
+
+  border-radius: 8px;
+}
+
+.hair-agent-content {
+  width: 58%;
+
+  padding: 24px 28px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.hair-agent-eyebrow {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--hair-light-gold);
+
+  font-size: 5px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
+}
+
+.hair-agent-content h2 {
+  margin: 0 0 8px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 30px;
+
+  font-weight: 500;
+
+  line-height: 0.88;
+}
+
+.hair-agent-content p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 7px;
+
+  line-height: 1.7;
+}
+
+.hair-agent-button {
+  margin-top: 11px;
+
+  min-height: 25px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 10px;
+
+  border: 1px solid rgba(201, 170, 101, 0.7);
+
+  background: transparent;
+
+  color: #fff;
+
+  font-size: 6px;
+
+  font-weight: 600;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.hair-agent-button:hover {
+  background: var(--hair-gold);
+
+  border-color: var(--hair-gold);
+}
+
+.hair-agent-image {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  width: 48%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.hair-agent-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #111 0%,
+      rgba(17, 17, 17, 0.15) 40%,
+      transparent 100%
+    );
+}
+
+.hair-agent-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center 25%;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.hair-benefits {
+  width: min(1400px, 92%);
+
+  min-height: 100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.hair-benefit {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 11px;
+
+  transition: transform 0.25s ease;
+}
+
+.hair-benefit:hover {
+  transform: translateY(-3px);
+}
+
+.hair-benefit-icon {
+  color: var(--hair-gold);
+}
+
+.hair-benefit strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 6px;
+
+  font-weight: 700;
+}
+
+.hair-benefit p {
+  margin: 0;
+
+  color: #68615b;
+
+  font-size: 5.5px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hair-catalog {
+    grid-template-columns: 135px 1fr;
+
+    gap: 16px;
+  }
+
+  .hair-product-grid {
+    gap: 10px;
+  }
+
+  .hair-product-image {
+    height: 200px;
+  }
+
+  .hair-hero-image {
+    right: 3%;
+
+    width: 38%;
+  }
+
+  .hair-agent-content {
+    width: 62%;
+  }
+
+  .hair-agent-image {
+    width: 45%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* HERO */
+
+  .hair-hero {
+    min-height: 235px;
+
+    align-items: flex-end;
+  }
+
+  .hair-hero-content {
+    width: 92%;
+
+    padding-bottom: 30px;
+  }
+
+  .hair-breadcrumb {
+    top: 17px;
+
+    font-size: 7px;
+  }
+
+  .hair-hero-copy {
+    padding-top: 50px;
+  }
+
+  .hair-eyebrow {
+    font-size: 5px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .hair-hero-copy h1 {
+    max-width: 230px;
+
+    font-size: 31px;
+
+    line-height: 0.9;
+  }
+
+  .hair-hero-copy p {
+    max-width: 225px;
+
+    font-size: 7px;
+
+    line-height: 1.7;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .hair-hero-image {
+    right: -12%;
+
+    width: 62%;
+
+    height: 100%;
+
+    opacity: 0.72;
+  }
+
+  .hair-hero-image img {
+    height: 130%;
+  }
+
+
+  /* FILTER BAR */
+
+  .hair-filter-bar {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 30;
+
+    box-shadow:
+      0 4px 15px rgba(0, 0, 0, 0.04);
+  }
+
+  .hair-filter-inner {
+    width: 92%;
+
+    min-height: 57px;
+
+    overflow-x: auto;
+
+    gap: 8px;
+
+    scrollbar-width: none;
+  }
+
+  .hair-filter-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-filter-toggle {
+    display: flex;
+
+    flex: 0 0 auto;
+  }
+
+  .hair-filter {
+    flex: 0 0 auto;
+
+    min-width: 92px;
+
+    height: 30px;
+  }
+
+
+  /* MOBILE FILTER PANEL */
+
+  .mobile-filter-panel {
+    display: block;
+
+    position: fixed;
+
+    z-index: 100;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 24px 20px 30px;
+
+    background: #fff;
+
+    border-radius: 18px 18px 0 0;
+
+    box-shadow:
+      0 -15px 45px rgba(0, 0, 0, 0.15);
+  }
+
+  .mobile-filter-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+  }
+
+  .mobile-filter-header h2 {
+    margin: 0;
+
+    font-family:
+      "Cormorant Garamond",
+      Georgia,
+      serif;
+
+    font-size: 28px;
+
+    font-weight: 500;
+  }
+
+  .mobile-filter-header button {
+    width: 30px;
+    height: 30px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: #f5f1ed;
+
+    font-size: 20px;
+  }
+
+  .mobile-filter-group {
+    margin-bottom: 14px;
+  }
+
+  .mobile-filter-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 8px;
+
+    font-weight: 600;
+  }
+
+  .mobile-filter-group select {
+    width: 100%;
+
+    height: 40px;
+
+    padding: 0 10px;
+
+    border: 1px solid #ddd5ce;
+
+    background: #fff;
+
+    font-size: 8px;
+  }
+
+  .reset-filters {
+    width: 100%;
+
+    height: 40px;
+
+    margin-top: 5px;
+
+    border: 0;
+
+    background: var(--hair-black);
+
+    color: #fff;
+
+    font-size: 8px;
+
+    font-weight: 600;
+  }
+
+
+  /* CATALOG */
+
+  .hair-catalog {
+    width: 92%;
+
+    display: block;
+
+    margin-top: 18px;
+  }
+
+  .hair-sidebar {
+    display: none;
+  }
+
+  .hair-products-header {
+    margin-bottom: 9px;
+  }
+
+  .hair-products-header > strong {
+    font-size: 7px;
+  }
+
+
+  /* PRODUCTS */
+
+  .hair-product-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap: 9px;
+  }
+
+  .hair-product-image {
+    height: 235px;
+  }
+
+  .hair-wishlist {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+  .hair-product-info {
+    padding: 8px 7px 9px;
+  }
+
+  .hair-product-info h2 {
+    font-size: 8px;
+  }
+
+  .hair-product-price {
+    font-size: 8px;
+  }
+
+  .hair-installment {
+    font-size: 5.5px;
+  }
+
+  .hair-product-bottom {
+    margin-top: 10px;
+  }
+
+
+  /* LIST VIEW */
+
+  .hair-product-list .hair-product-card {
+    grid-template-columns: 130px 1fr;
+  }
+
+  .hair-product-list .hair-product-image {
+    height: 180px;
+  }
+
+  .hair-product-list .hair-product-info {
+    padding: 15px;
+  }
+
+
+  /* AGENT */
+
+  .hair-agent-banner {
+    width: 100%;
+
+    min-height: 215px;
+
+    margin-top: 28px;
+
+    border-radius: 0;
+  }
+
+  .hair-agent-content {
+    width: 68%;
+
+    padding: 28px 20px;
+  }
+
+  .hair-agent-content h2 {
+    font-size: 29px;
+  }
+
+  .hair-agent-content p {
+    font-size: 7px;
+  }
+
+  .hair-agent-image {
+    width: 48%;
+  }
+
+
+  /* BENEFITS */
+
+  .hair-benefits {
+    width: 92%;
+
+    min-height: auto;
+
+    padding: 25px 0;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 24px 10px;
+  }
+
+  .hair-benefit {
+    justify-content: flex-start;
+
+    gap: 8px;
+  }
+
+  .hair-benefit strong {
+    font-size: 6px;
+  }
+
+  .hair-benefit p {
+    font-size: 5.5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .hair-hero {
+    min-height: 225px;
+  }
+
+  .hair-hero-copy h1 {
+    font-size: 27px;
+  }
+
+  .hair-hero-copy p {
+    font-size: 6.5px;
+  }
+
+  .hair-hero-image {
+    right: -17%;
+
+    width: 70%;
+  }
+
+  .hair-product-image {
+    height: 210px;
+  }
+
+  .hair-product-info h2 {
+    font-size: 7px;
+  }
+
+  .hair-product-price {
+    font-size: 7.5px;
+  }
+
+  .hair-installment {
+    font-size: 5px;
+  }
+
+  .hair-agent-content {
+    width: 72%;
+  }
+
+  .hair-agent-image {
+    width: 50%;
+  }
+
+  .hair-agent-content h2 {
+    font-size: 26px;
+  }
+
+  .hair-benefits {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hair-page *,
+  .hair-page *::before,
+  .hair-page *::after {
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+  }
+}

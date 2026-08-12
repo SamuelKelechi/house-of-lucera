@@ -1,0 +1,76 @@
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #171513;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =====================================================
+   LUCÉRA DESIGN TOKENS
+===================================================== */
+
+:root {
+  --lucera-black: #111111;
+  --lucera-deep-black: #080808;
+
+  --lucera-gold: #b9974b;
+  --lucera-gold-light: #d0b273;
+
+  --lucera-cream: #f5eee8;
+  --lucera-soft-cream: #faf7f4;
+
+  --lucera-white: #ffffff;
+
+  --lucera-text: #171513;
+  --lucera-muted: #6d6761;
+
+  --lucera-border: #e8e2dc;
+}
+
+
+/* =====================================================
+   GLOBAL TYPOGRAPHY
+===================================================== */
+
+.lucera-serif {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.lucera-gold {
+  color: var(--lucera-gold);
+}

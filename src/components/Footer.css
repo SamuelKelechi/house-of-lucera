@@ -1,0 +1,534 @@
+/* =========================================================
+   HOUSE OF LUCÉRA
+   SHARED FOOTER
+========================================================= */
+.site-footer {
+  background: #080808;
+  color: #ffffff;
+  margin-top: 0;
+}
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.footer-newsletter {
+  background: #f5ede6;
+  color: #111111;
+  border-top: 1px solid #e8e3de;
+  border-bottom: 1px solid #e8e3de;
+}
+
+.footer-newsletter-content {
+  width: min(1200px, 90%);
+  min-height: 220px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+.footer-newsletter-copy {
+  max-width: 480px;
+}
+
+.footer-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #b9974b;
+}
+
+.footer-newsletter-copy h2 {
+  margin: 0 0 12px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(35px, 4vw, 52px);
+  font-weight: 600;
+  line-height: 0.9;
+}
+
+.footer-newsletter-copy p {
+  margin: 0;
+
+  max-width: 380px;
+
+  font-size: 9px;
+  line-height: 1.8;
+
+  color: #5f5954;
+}
+
+/* =========================================================
+   NEWSLETTER FORM
+========================================================= */
+
+.newsletter-form {
+  width: min(430px, 100%);
+
+  display: flex;
+  align-items: stretch;
+
+  gap: 8px;
+}
+
+.newsletter-input-wrap {
+  flex: 1;
+
+  min-height: 43px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 13px;
+
+  background: #ffffff;
+
+  border: 1px solid #ddd4cb;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.newsletter-input-wrap:focus-within {
+  border-color: #b9974b;
+
+  box-shadow: 0 0 0 2px rgba(185, 151, 75, 0.08);
+}
+
+.newsletter-input-wrap svg {
+  color: #9b938d;
+  flex-shrink: 0;
+}
+
+.newsletter-input-wrap input {
+  width: 100%;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  font-size: 8px;
+
+  color: #111111;
+}
+
+.newsletter-input-wrap input::placeholder {
+  color: #9a938d;
+}
+
+.newsletter-form button {
+  min-width: 105px;
+
+  border: 0;
+
+  background: #080808;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 13px;
+
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.newsletter-form button:hover {
+  background: #b9974b;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
+.footer-main {
+  background: #080808;
+}
+
+.footer-container {
+  width: min(1200px, 90%);
+
+  margin: auto;
+
+  padding: 60px 0 55px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.7fr
+    1fr
+    1fr
+    1.2fr;
+
+  gap: 55px;
+}
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.footer-brand {
+  max-width: 300px;
+}
+
+.footer-logo {
+  width: 105px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  margin-bottom: 18px;
+}
+
+.footer-logo img {
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+.footer-brand p {
+  margin: 0;
+
+  max-width: 270px;
+
+  color: #aaa39d;
+
+  font-size: 8px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.footer-socials {
+  display: flex;
+  gap: 8px;
+
+  margin-top: 20px;
+}
+
+.footer-socials a {
+  width: 29px;
+  height: 29px;
+
+  border: 1px solid #393633;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  color: #c4beb8;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+  border-color: #b9974b;
+  background: #b9974b;
+
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.footer-column h3 {
+  margin: 0 0 19px;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: #ffffff;
+}
+
+.footer-column nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.footer-column nav a {
+  width: fit-content;
+
+  color: #aaa39d;
+
+  font-size: 8px;
+
+  transition:
+    color 0.25s ease,
+    padding-left 0.25s ease;
+}
+
+.footer-column nav a:hover {
+  color: #b9974b;
+  padding-left: 4px;
+}
+
+/* =========================================================
+   CUSTOMER CARE
+========================================================= */
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact > a,
+.footer-address {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 9px;
+
+  margin-bottom: 14px;
+
+  color: #aaa39d;
+
+  font-size: 8px;
+  line-height: 1.5;
+
+  transition: color 0.25s ease;
+}
+
+.footer-contact > a:hover {
+  color: #b9974b;
+}
+
+.footer-contact svg,
+.footer-address svg {
+  flex-shrink: 0;
+
+  margin-top: 1px;
+
+  color: #b9974b;
+}
+
+/* =========================================================
+   BOTTOM BAR
+========================================================= */
+
+.footer-bottom {
+  border-top: 1px solid #272523;
+}
+
+.footer-bottom-inner {
+  width: min(1200px, 90%);
+
+  min-height: 55px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #77716c;
+
+  font-size: 7px;
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+}
+
+.footer-legal a {
+  color: #77716c;
+
+  font-size: 7px;
+
+  transition: color 0.25s ease;
+}
+
+.footer-legal a:hover {
+  color: #b9974b;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .footer-newsletter-content {
+    min-height: 210px;
+    gap: 35px;
+  }
+
+  .footer-container {
+    grid-template-columns:
+      1.5fr
+      1fr
+      1fr;
+
+    gap: 40px;
+  }
+
+  .footer-contact {
+    grid-column: 2 / 4;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .footer-newsletter-content {
+    width: 90%;
+
+    padding: 45px 0;
+
+    min-height: auto;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 30px;
+  }
+
+  .footer-newsletter-copy h2 {
+    font-size: 42px;
+  }
+
+  .footer-newsletter-copy p {
+    font-size: 8px;
+  }
+
+  .newsletter-form {
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .newsletter-input-wrap {
+    min-height: 45px;
+  }
+
+  .newsletter-form button {
+    min-height: 42px;
+  }
+
+  /* Main footer */
+
+  .footer-container {
+    width: 90%;
+
+    padding: 45px 0;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px 25px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+
+    max-width: 100%;
+  }
+
+  .footer-brand p {
+    max-width: 350px;
+  }
+
+  .footer-contact {
+    grid-column: auto;
+  }
+
+  /* Bottom */
+
+  .footer-bottom-inner {
+    padding: 18px 0;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .footer-legal {
+    gap: 16px;
+
+    flex-wrap: wrap;
+  }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .footer-newsletter-copy h2 {
+    font-size: 37px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+  }
+
+  .footer-brand,
+  .footer-contact {
+    grid-column: auto;
+  }
+
+  .footer-bottom p,
+  .footer-legal a {
+    font-size: 6.5px;
+  }
+
+}

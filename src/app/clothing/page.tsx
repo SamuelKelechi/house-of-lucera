@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 import Link from "next/link";
 
 import Header from "@/components/Header";
@@ -21,6 +21,10 @@ import {
 
 import "./clothing.css";
 
+/* =========================================================
+   TYPES
+========================================================= */
+
 type Product = {
   id: number;
   name: string;
@@ -29,6 +33,7 @@ type Product = {
   image: string;
   reviews: number;
 };
+
 
 /* =========================================================
    PRODUCTS
@@ -101,7 +106,7 @@ const products: Product[] = [
    CATEGORIES
 ========================================================= */
 
-const categories = [
+const categories: string[] = [
   "Lucéra Collection",
   "Dresses",
   "Two Pieces",
@@ -113,7 +118,7 @@ const categories = [
    SIZES
 ========================================================= */
 
-const sizes = [
+const sizes: string[] = [
   "XS",
   "S",
   "M",
@@ -125,52 +130,62 @@ const sizes = [
 
 
 /* =========================================================
+   SORT OPTIONS
+========================================================= */
+
+const sortOptions: string[] = [
+  "Featured",
+  "Price: Low to High",
+  "Price: High to Low",
+  "Name",
+];
+
+
+/* =========================================================
    CLOTHING PAGE
 ========================================================= */
 
 export default function Clothing() {
+  /* =======================================================
+     STATE
+  ======================================================= */
 
   const [wishlist, setWishlist] = useState<number[]>([]);
 
   const [activeCategory, setActiveCategory] =
-    useState("Lucéra Collection");
+    useState<string>("Lucéra Collection");
 
-  const [selectedSize, setSelectedSize] = useState<string>("");
+  const [selectedSize, setSelectedSize] =
+    useState<string | null>(null);
 
   const [sortOpen, setSortOpen] =
-    useState(false);
+    useState<boolean>(false);
 
   const [selectedSort, setSelectedSort] =
-    useState("Featured");
+    useState<string>("Featured");
 
 
   /* =======================================================
      WISHLIST
   ======================================================= */
-const toggleWishlist = (
-  id: number,
-  event: React.MouseEvent<HTMLButtonElement>
-) => {
-  event.preventDefault();
 
-  setWishlist((current: number[]) =>
-    current.includes(id)
-      ? current.filter((item) => item !== id)
-      : [...current, id]
-  );
-};
+  const toggleWishlist = (id: number): void => {
+    setWishlist((current: number[]) =>
+      current.includes(id)
+        ? current.filter((item: number) => item !== id)
+        : [...current, id]
+    );
+  };
 
 
   /* =======================================================
      SIZE
   ======================================================= */
 
-  const handleSizeSelect = (size: string) => {
-
-    setSelectedSize((current) =>
+  const handleSizeSelect = (size: string): void => {
+    setSelectedSize((current: string | null) =>
       current === size ? null : size
     );
-
   };
 
 
@@ -178,36 +193,33 @@ const toggleWishlist = (
      ADD TO CART
   ======================================================= */
 
-  const handleAddToCart = (product, event) => {
-
+  const handleAddToCart = (
+    product: Product,
+    event: MouseEvent<HTMLButtonElement>
+  ): void => {
     event.preventDefault();
     event.stopPropagation();
 
     /*
-      Cart functionality will be connected
-      to the global cart context later.
+      Cart functionality is kept intact here.
+      This can be connected to the global cart context.
     */
 
-    console.log(
-      "Added to cart:",
-      product.name
-    );
-
+    console.log("Added to cart:", product.name);
   };
 
 
   /* =======================================================
-     SORT
+     SORT PRODUCTS
   ======================================================= */
 
-  const sortProducts = (items) => {
-
-    const sorted = [...items];
+  const sortProducts = (
+    items: Product[]
+  ): Product[] => {
+    const sorted: Product[] = [...items];
 
     if (selectedSort === "Price: Low to High") {
-
-      sorted.sort((a, b) => {
-
+      sorted.sort((a: Product, b: Product) => {
         const priceA = Number(
           a.price.replace(/[₦,]/g, "")
         );
@@ -217,15 +229,11 @@ const toggleWishlist = (
         );
 
         return priceA - priceB;
-
       });
-
     }
 
     if (selectedSort === "Price: High to Low") {
-
-      sorted.sort((a, b) => {
-
+      sorted.sort((a: Product, b: Product) => {
         const priceA = Number(
           a.price.replace(/[₦,]/g, "")
         );
@@ -235,26 +243,31 @@ const toggleWishlist = (
         );
 
         return priceB - priceA;
-
       });
-
     }
 
     if (selectedSort === "Name") {
-
-      sorted.sort((a, b) =>
-        a.name.localeCompare(b.name)
+      sorted.sort(
+        (a: Product, b: Product) =>
+          a.name.localeCompare(b.name)
       );
-
     }
 
     return sorted;
-
   };
 
 
-  const displayedProducts =
+  /* =======================================================
+     DISPLAYED PRODUCTS
+  ======================================================= */
+
+  const displayedProducts: Product[] =
     sortProducts(products);
+
+
+  /* =======================================================
+     RENDER
+  ======================================================= */
 
 
   return (
@@ -714,31 +727,29 @@ const toggleWishlist = (
                       />
 
 
-                      <button
-                        type="button"
-                        className="wishlist-button"
-                       onClick={(event) => toggleWishlist(product.id, event)}
-                        aria-label={
-                          wishlist.includes(
-                            product.id
-                          )
-                            ? "Remove from wishlist"
-                            : "Add to wishlist"
-                        }
-                      >
-
-                        <Heart
-                          size={15}
-                          fill={
-                            wishlist.includes(
-                              product.id
-                            )
-                              ? "currentColor"
-                              : "none"
-                          }
-                        />
-
-                      </button>
+                    <button
+                            type="button"
+                            className="wishlist-button"
+                            onClick={(event: MouseEvent<HTMLButtonElement>) => {
+                                event.preventDefault();
+                                event.stopPropagation();
+                                toggleWishlist(product.id);
+                            }}
+                            aria-label={
+                                wishlist.includes(product.id)
+                                ? "Remove from wishlist"
+                                : "Add to wishlist"
+                            }
+                            >
+                            <Heart
+                                size={15}
+                                fill={
+                                wishlist.includes(product.id)
+                                    ? "currentColor"
+                                    : "none"
+                                }
+                            />
+                    </button>
 
                     </Link>
 

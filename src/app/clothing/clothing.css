@@ -1340,3 +1340,19 @@
     font-size: 7px;
   }
 }
+
+/* =========================================================
+   PRODUCT IMAGE LINK
+========================================================= */
+
+.product-image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.product-image-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

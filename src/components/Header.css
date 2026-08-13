@@ -3,6 +3,11 @@
    SHARED HEADER
 ========================================================= */
 
+
+/* =========================================================
+   BOX SIZING
+========================================================= */
+
 .promo-bar,
 .promo-bar *,
 .header,
@@ -12,18 +17,10 @@
   box-sizing: border-box;
 }
 
-.promo-bar {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 10px;
-  line-height: 1;
-}
 
-.promo-bar div,
-.promo-bar span {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: inherit;
-  line-height: 1;
-}
+/* =========================================================
+   PROMO BAR
+========================================================= */
 
 .promo-bar {
   min-height: 27px;
@@ -52,11 +49,12 @@
 
 .promo-bar > div,
 .promo-bar > span {
+  margin: 0;
+  padding: 0;
+
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 10px;
   line-height: 1;
-  margin: 0;
-  padding: 0;
 }
 
 .promo-divider {
@@ -83,8 +81,8 @@
 }
 
 .header-inner {
-  height: 100%;
   width: min(1440px, 92%);
+  height: 100%;
 
   margin: auto;
 
@@ -182,7 +180,7 @@
 }
 
 
-/* Current page */
+/* Active */
 
 .desktop-nav a.active {
   color: #b9974b;
@@ -206,6 +204,8 @@
   display: flex;
   align-items: center;
   gap: 11px;
+
+  flex-shrink: 0;
 }
 
 .header-actions button {
@@ -219,6 +219,10 @@
 
   display: grid;
   place-items: center;
+
+  position: relative;
+
+  color: inherit;
 
   transition:
     color 0.25s ease,
@@ -234,37 +238,51 @@
 /* =========================================================
    SHOPPING BAG
 ========================================================= */
-
 .bag-button {
   position: relative;
+
+  width: 22px;
+  height: 25px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  color: inherit;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.bag-button:hover {
+  color: #b9974b;
+  transform: translateY(-2px);
 }
 
 .bag-button span {
   position: absolute;
 
-  top: -4px;
-  right: -5px;
+  top: -5px;
+  right: -6px;
 
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
 
   border-radius: 50%;
 
   background: #b9974b;
   color: #ffffff;
 
+  font-family: Arial, sans-serif;
   font-size: 7px;
+  font-weight: 600;
+  line-height: 1;
 
   display: grid;
   place-items: center;
-
-  transition: transform 0.25s ease;
 }
-
-.bag-button:hover span {
-  transform: scale(1.15);
-}
-
 
 /* =========================================================
    MOBILE MENU BUTTON
@@ -273,12 +291,17 @@
 .mobile-menu-button {
   display: none;
 
+  width: 22px;
+  height: 25px;
+
   border: 0;
   background: transparent;
 
   padding: 0;
 
   color: #111111;
+
+  flex-shrink: 0;
 
   transition:
     color 0.25s ease,
@@ -395,9 +418,6 @@
   padding-left: 5px;
 }
 
-
-/* Active mobile page */
-
 .mobile-menu nav a.active {
   color: #b9974b;
 }
@@ -438,17 +458,21 @@
 
 @media (max-width: 700px) {
 
+  /* -------------------------------------------------------
+     PROMO BAR
+  ------------------------------------------------------- */
+
   .promo-bar {
     min-height: 25px;
     height: 25px;
 
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 8px;
-    line-height: 1;
+    padding: 0 10px;
 
     gap: 6px;
 
-    padding: 0 10px;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 8px;
+    line-height: 1;
 
     white-space: nowrap;
   }
@@ -464,7 +488,10 @@
     display: none;
   }
 
-  /* Header */
+
+  /* -------------------------------------------------------
+     HEADER
+  ------------------------------------------------------- */
 
   .header {
     height: 67px;
@@ -475,7 +502,9 @@
   }
 
 
-  /* Hamburger */
+  /* -------------------------------------------------------
+     HAMBURGER
+  ------------------------------------------------------- */
 
   .mobile-menu-button {
     display: grid;
@@ -483,7 +512,9 @@
   }
 
 
-  /* Center logo */
+  /* -------------------------------------------------------
+     CENTER LOGO
+  ------------------------------------------------------- */
 
   .brand {
     position: absolute;
@@ -501,23 +532,75 @@
   }
 
 
-  /* Hide desktop navigation */
+  /* -------------------------------------------------------
+     HIDE DESKTOP NAV
+  ------------------------------------------------------- */
 
   .desktop-nav {
     display: none;
   }
 
 
-  /* Header icons */
+  /* -------------------------------------------------------
+     HEADER ACTIONS
+  ------------------------------------------------------- */
 
   .header-actions {
     margin-left: auto;
 
+    display: flex;
+    align-items: center;
+
     gap: 9px;
+
+    /*
+      Important:
+      Keep the action area visible on mobile.
+    */
+    flex-shrink: 0;
   }
+
+
+  /* Hide SEARCH only */
 
   .header-actions button:nth-child(1) {
     display: none;
+  }
+
+
+  /*
+    Account, Wishlist and Shopping Bag
+    remain visible on mobile.
+  */
+
+  .header-actions button:nth-child(2),
+  .header-actions button:nth-child(3),
+  .header-actions button:nth-child(4) {
+    display: grid;
+  }
+
+
+  /* Make mobile bag slightly larger */
+
+  .header-actions .bag-button {
+    width: 22px !important;
+    height: 25px !important;
+
+    display: grid !important;
+    place-items: center;
+  }
+
+
+  /* Prevent badge from being clipped */
+
+  .header-actions .bag-button span {
+    top: -5px;
+    right: -6px;
+
+    width: 12px;
+    height: 12px;
+
+    font-size: 7px;
   }
 
 }
@@ -529,7 +612,7 @@
 
 @media (max-width: 420px) {
 
- .promo-bar {
+  .promo-bar {
     font-size: 7px;
   }
 
@@ -538,13 +621,68 @@
     font-size: 7px;
   }
 
+
   .header-actions {
     gap: 6px;
   }
 
+
+  .header-actions button {
+    width: 19px;
+    height: 24px;
+  }
+
+
   .header-actions svg {
     width: 17px;
     height: 17px;
+  }
+
+
+  .header-actions .bag-button {
+    width: 21px !important;
+    height: 24px !important;
+  }
+
+
+  .header-actions .bag-button span {
+    top: -5px;
+    right: -6px;
+
+    width: 11px;
+    height: 11px;
+
+    font-size: 6.5px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .header-inner {
+    width: 94%;
+  }
+
+  .header-actions {
+    gap: 4px;
+  }
+
+  .header-actions button {
+    width: 18px;
+  }
+
+  .header-actions svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .header-actions .bag-button {
+    width: 20px !important;
   }
 
 }

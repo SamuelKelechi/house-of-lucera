@@ -122,37 +122,37 @@ export default function Header() {
           <div className="header-actions">
 
             <button
-              aria-label="Search"
-              title="Search"
+                aria-label="Search"
+                title="Search"
             >
-              <Search size={20} />
+                <Search size={20} />
             </button>
 
             <button
-              aria-label="Account"
-              title="Account"
+                aria-label="Account"
+                title="Account"
             >
-              <UserRound size={20} />
+                <UserRound size={20} />
             </button>
 
             <button
-              aria-label="Wishlist"
-              title="Wishlist"
+                aria-label="Wishlist"
+                title="Wishlist"
             >
-              <Heart size={20} />
+                <Heart size={20} />
             </button>
-            <a href="/cart">
-            <button
-              className="bag-button"
-              aria-label="Shopping bag"
-              title="Shopping bag"
+
+            <a
+                href="/cart"
+                className="bag-button"
+                aria-label="Shopping bag"
+                title="Shopping bag"
             >
-              <ShoppingBag size={20} />
-              <span>0</span>
-            </button>
+                <ShoppingBag size={20} />
+                <span>0</span>
             </a>
 
-          </div>
+        </div>
 
         </div>
       </header>

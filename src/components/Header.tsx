@@ -64,7 +64,7 @@ export default function Header() {
 
           <a href="/" className="brand" aria-label="House of Lucéra home">
             <img
-              src="./logo.jpeg"
+              src="/Logo.jpeg"
               alt="House of Lucéra"
             />
           </a>
@@ -178,7 +178,7 @@ export default function Header() {
                 onClick={() => setMobileMenu(false)}
               >
                 <img
-                  src="./logo.jpeg"
+                  src="/Logo.jpeg"
                   alt="House of Lucéra"
                 />
               </a>

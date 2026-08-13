@@ -78,7 +78,7 @@ export default function Footer() {
               className="footer-logo"
             >
               <img
-                src="./logo.jpeg"
+                src="/Logo.jpeg"
                 alt="House of Lucéra"
               />
             </a>

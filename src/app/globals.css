@@ -16,6 +16,8 @@ body {
   background: #ffffff;
   color: #171513;
   font-family: "Montserrat", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 button,
@@ -23,6 +25,7 @@ input,
 textarea,
 select {
   font-family: inherit;
+  font-size: inherit;
 }
 
 button {
@@ -73,4 +76,64 @@ img {
 
 .lucera-gold {
   color: var(--lucera-gold);
+}
+
+
+/* =====================================================
+   GLOBAL TEXT FOUNDATION
+===================================================== */
+
+p {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.lucera-body {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.lucera-small {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.lucera-label {
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.lucera-heading {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+
+/* =====================================================
+   RESPONSIVE TYPOGRAPHY
+===================================================== */
+
+@media (max-width: 700px) {
+  body {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .lucera-body {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .lucera-small {
+    font-size: 11px;
+  }
+
+  .lucera-label {
+    font-size: 10px;
+  }
 }

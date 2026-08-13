@@ -1,6 +1,6 @@
 /* =========================================================
    HOUSE OF LUCÉRA — CLOTHING PAGE
-   Cleaned & Responsive Page Styles
+   Typography Improved
 ========================================================= */
 
 /* =========================================================
@@ -68,7 +68,7 @@
 
   color: var(--lucera-text, #171717);
 
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -86,7 +86,7 @@
 
   font-family: "Cormorant Garamond", Georgia, serif;
 
-  font-size: clamp(32px, 4vw, 54px);
+  font-size: clamp(36px, 4vw, 58px);
   font-weight: 600;
   line-height: 0.95;
 
@@ -100,7 +100,7 @@
 
   color: #3d3936;
 
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.9;
 }
 
@@ -170,7 +170,7 @@
 
   color: var(--lucera-text, #171717);
 
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 600;
 
   transition: color 0.25s ease;
@@ -243,7 +243,7 @@
 
   color: #292624;
 
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 500;
 
   transition:
@@ -303,7 +303,7 @@
 
   color: var(--lucera-text, #171717);
 
-  font-size: 9px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -317,7 +317,7 @@
 .category-links a {
   color: #272522;
 
-  font-size: 8px;
+  font-size: 12px;
 
   transition:
     color 0.25s ease,
@@ -359,7 +359,7 @@
 
   color: var(--lucera-text, #171717);
 
-  font-size: 7px;
+  font-size: 11px;
 
   transition:
     background 0.25s ease,
@@ -406,7 +406,7 @@
 
   margin-bottom: 7px;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 700;
 }
 
@@ -415,7 +415,7 @@
 
   color: #55504c;
 
-  font-size: 7px;
+  font-size: 11px;
   line-height: 1.65;
 }
 
@@ -436,7 +436,7 @@
 
   color: #fff;
 
-  font-size: 6px;
+  font-size: 10px;
   font-weight: 600;
 
   transition:
@@ -470,7 +470,7 @@
 }
 
 .products-header > strong {
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -676,7 +676,7 @@
 
   color: var(--lucera-text, #171717);
 
-  font-size: 8px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 1.35;
 
@@ -694,7 +694,7 @@
 
   color: var(--lucera-text, #171717);
 
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -703,7 +703,7 @@
 
   color: #77716d;
 
-  font-size: 6px;
+  font-size: 10px;
   line-height: 1.4;
 }
 
@@ -723,7 +723,7 @@
 
   color: #625d58;
 
-  font-size: 6px;
+  font-size: 10px;
 }
 
 .stars {
@@ -832,7 +832,7 @@
 
   margin-bottom: 4px;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 700;
 }
 
@@ -841,7 +841,7 @@
 
   color: #68625d;
 
-  font-size: 6px;
+  font-size: 9px;
   line-height: 1.7;
 }
 
@@ -904,7 +904,7 @@
   .breadcrumb {
     top: 18px;
 
-    font-size: 7px;
+    font-size: 10px;
   }
 
   .hero-copy {
@@ -914,7 +914,7 @@
   .hero-copy h1 {
     max-width: 230px;
 
-    font-size: 29px;
+    font-size: 32px;
 
     line-height: 1;
   }
@@ -922,7 +922,7 @@
   .hero-copy p {
     max-width: 230px;
 
-    font-size: 8px;
+    font-size: 11px;
 
     line-height: 1.7;
   }
@@ -973,7 +973,7 @@
 
     height: 48px;
 
-    font-size: 7px;
+    font-size: 10px;
   }
 
 
@@ -1001,6 +1001,8 @@
 
   .catalog-controls button {
     flex: 0 0 auto;
+
+    font-size: 11px;
   }
 
 
@@ -1029,6 +1031,10 @@
     margin-bottom: 9px;
 
     align-items: center;
+  }
+
+  .products-header > strong {
+    font-size: 11px;
   }
 
 
@@ -1067,19 +1073,23 @@
   }
 
   .product-info h2 {
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .product-price {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .installment {
-    font-size: 6px;
+    font-size: 9px;
   }
 
   .product-bottom {
     margin-top: 11px;
+  }
+
+  .rating {
+    font-size: 9px;
   }
 
   .add-button {
@@ -1111,11 +1121,11 @@
   }
 
   .benefit strong {
-    font-size: 6.5px;
+    font-size: 10px;
   }
 
   .benefit p {
-    font-size: 6px;
+    font-size: 9px;
   }
 }
 
@@ -1131,11 +1141,11 @@
   }
 
   .hero-copy h1 {
-    font-size: 26px;
+    font-size: 29px;
   }
 
   .hero-copy p {
-    font-size: 7px;
+    font-size: 10px;
   }
 
   .hero-image {
@@ -1148,20 +1158,32 @@
     font-size: 18px;
   }
 
+  .category-tabs a {
+    font-size: 9px;
+  }
+
+  .catalog-controls button {
+    font-size: 10px;
+  }
+
   .product-image {
     height: 210px;
   }
 
   .product-info h2 {
-    font-size: 7px;
+    font-size: 10px;
   }
 
   .product-price {
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .installment {
-    font-size: 5.5px;
+    font-size: 8px;
+  }
+
+  .rating {
+    font-size: 8px;
   }
 
   .benefits {
@@ -1187,7 +1209,11 @@
   }
 
   .hero-copy h1 {
-    font-size: 24px;
+    font-size: 27px;
+  }
+
+  .hero-copy p {
+    font-size: 9px;
   }
 
   .product-grid {
@@ -1202,6 +1228,18 @@
     padding: 7px 6px 9px;
   }
 
+  .product-info h2 {
+    font-size: 9px;
+  }
+
+  .product-price {
+    font-size: 10px;
+  }
+
+  .installment {
+    font-size: 8px;
+  }
+
   .product-bottom {
     margin-top: 9px;
   }
@@ -1209,7 +1247,7 @@
   .rating {
     gap: 3px;
 
-    font-size: 5.5px;
+    font-size: 7px;
   }
 
   .add-button {
@@ -1227,7 +1265,7 @@
 
   .site *,
   .site *::before,
-  .site *::after {
+  .site *::before {
     scroll-behavior: auto !important;
 
     transition-duration: 0.01ms !important;
@@ -1254,7 +1292,7 @@
 
   color: var(--lucera-text, #171717);
 
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 600;
 
   white-space: nowrap;
@@ -1303,7 +1341,7 @@
 
   text-align: left;
 
-  font-size: 8px;
+  font-size: 12px;
 
   cursor: pointer;
 
@@ -1337,7 +1375,7 @@
   .category-tabs button {
     height: 48px;
 
-    font-size: 7px;
+    font-size: 10px;
   }
 }
 

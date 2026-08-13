@@ -114,11 +114,13 @@
 
   color: #b9974b;
 
-  font-size: 8px;
+  font-size: 13px;
 
   font-weight: 600;
 
   letter-spacing: 3px;
+
+  line-height: 1.5;
 }
 
 .success-hero h1 {
@@ -129,21 +131,23 @@
     Georgia,
     serif;
 
-  font-size: clamp(45px, 6vw, 72px);
+  font-size: clamp(48px, 6vw, 72px);
 
-  line-height: 0.9;
+  line-height: 0.95;
 
   font-weight: 500;
 }
 
 .success-hero > p {
+  max-width: 620px;
+
   margin: 20px auto 0;
 
   color: #69635d;
 
-  font-size: 9px;
+  font-size: 15px;
 
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 
@@ -173,19 +177,23 @@
 .order-number span {
   color: #77716b;
 
-  font-size: 6px;
+  font-size: 12px;
 
   font-weight: 600;
 
   letter-spacing: 1.5px;
+
+  line-height: 1.5;
 }
 
 .order-number strong {
   color: #171717;
 
-  font-size: 8px;
+  font-size: 14px;
 
   letter-spacing: 1px;
+
+  line-height: 1.5;
 }
 
 
@@ -274,11 +282,13 @@
 
   color: #b9974b;
 
-  font-size: 7px;
+  font-size: 12px;
 
   font-weight: 600;
 
   letter-spacing: 2px;
+
+  line-height: 1.5;
 }
 
 .card-heading h2 {
@@ -353,9 +363,11 @@
 
   margin-bottom: 4px;
 
-  font-size: 8px;
+  font-size: 14px;
 
   font-weight: 600;
+
+  line-height: 1.4;
 }
 
 .status-step span {
@@ -363,9 +375,9 @@
 
   color: #77716c;
 
-  font-size: 7px;
+  font-size: 13px;
 
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .status-line {
@@ -392,15 +404,15 @@
 }
 
 .delivery-placeholder p {
-  max-width: 450px;
+  max-width: 550px;
 
   margin: 0;
 
   color: #77716c;
 
-  font-size: 8px;
+  font-size: 14px;
 
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 
@@ -429,6 +441,8 @@
   font-size: 21px;
 
   font-weight: 600;
+
+  line-height: 1.3;
 }
 
 .success-note p {
@@ -438,9 +452,9 @@
 
   color: #6d6761;
 
-  font-size: 8px;
+  font-size: 13px;
 
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 
@@ -494,7 +508,7 @@
 
   font-size: 42px;
 
-  line-height: 0.9;
+  line-height: 0.95;
 
   font-weight: 500;
 }
@@ -516,9 +530,9 @@
 
   color: rgba(255, 255, 255, 0.62);
 
-  font-size: 8px;
+  font-size: 13px;
 
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 
@@ -541,13 +555,17 @@
 .summary-row span {
   color: rgba(255, 255, 255, 0.5);
 
-  font-size: 7px;
+  font-size: 12px;
+
+  line-height: 1.5;
 }
 
 .summary-row strong {
-  font-size: 7px;
+  font-size: 13px;
 
   font-weight: 500;
+
+  line-height: 1.5;
 }
 
 .summary-row .confirmed {
@@ -566,7 +584,7 @@
 
   width: 100%;
 
-  min-height: 43px;
+  min-height: 47px;
 
   margin-top: 9px;
 
@@ -580,11 +598,13 @@
 
   gap: 10px;
 
-  font-size: 7px;
+  font-size: 12px;
 
   font-weight: 600;
 
-  letter-spacing: 0.4px;
+  letter-spacing: 0.7px;
+
+  line-height: 1.4;
 
   transition:
     background 0.25s ease,
@@ -641,19 +661,23 @@
     Georgia,
     serif;
 
-  font-size: 19px;
+  font-size: 22px;
 
   letter-spacing: 3px;
+
+  line-height: 1.4;
 }
 
 .success-footer-message p {
-  margin: 7px 0 0;
+  margin: 8px 0 0;
 
   color: #88817b;
 
-  font-size: 7px;
+  font-size: 12px;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
+
+  line-height: 1.6;
 }
 
 
@@ -680,6 +704,22 @@
   .success-summary h2 {
     font-size: 36px;
   }
+
+  .success-summary > p {
+    font-size: 12px;
+  }
+
+  .summary-row span {
+    font-size: 11px;
+  }
+
+  .summary-row strong {
+    font-size: 12px;
+  }
+
+  .success-button {
+    font-size: 11px;
+  }
 }
 
 
@@ -701,7 +741,9 @@
   }
 
   .success-eyebrow {
-    font-size: 7px;
+    font-size: 11px;
+
+    letter-spacing: 2.5px;
   }
 
   .success-hero h1 {
@@ -709,7 +751,7 @@
   }
 
   .success-hero > p {
-    font-size: 8px;
+    font-size: 13px;
   }
 
   .desktop-break {
@@ -720,6 +762,14 @@
     padding: 11px 18px;
 
     gap: 10px;
+  }
+
+  .order-number span {
+    font-size: 11px;
+  }
+
+  .order-number strong {
+    font-size: 13px;
   }
 
   .success-content {
@@ -736,8 +786,32 @@
     padding: 22px 18px;
   }
 
+  .small-label {
+    font-size: 11px;
+  }
+
   .card-heading h2 {
     font-size: 27px;
+  }
+
+  .status-step strong {
+    font-size: 13px;
+  }
+
+  .status-step span {
+    font-size: 12px;
+  }
+
+  .delivery-placeholder p {
+    font-size: 13px;
+  }
+
+  .success-note {
+    padding: 20px;
+  }
+
+  .success-note p {
+    font-size: 12px;
   }
 
   .success-summary {
@@ -752,8 +826,28 @@
     font-size: 40px;
   }
 
-  .success-note {
-    padding: 20px;
+  .success-summary > p {
+    font-size: 12px;
+  }
+
+  .summary-row span {
+    font-size: 11px;
+  }
+
+  .summary-row strong {
+    font-size: 12px;
+  }
+
+  .success-button {
+    font-size: 11px;
+  }
+
+  .success-footer-message span {
+    font-size: 20px;
+  }
+
+  .success-footer-message p {
+    font-size: 11px;
   }
 }
 
@@ -773,7 +867,13 @@
   }
 
   .success-hero > p {
-    font-size: 7px;
+    font-size: 12px;
+  }
+
+  .success-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 2px;
   }
 
   .order-number {
@@ -782,6 +882,14 @@
     gap: 5px;
 
     padding: 10px 18px;
+  }
+
+  .order-number span {
+    font-size: 10px;
+  }
+
+  .order-number strong {
+    font-size: 12px;
   }
 
   .success-content {
@@ -794,6 +902,10 @@
     font-size: 24px;
   }
 
+  .small-label {
+    font-size: 10px;
+  }
+
   .status-step {
     align-items: flex-start;
   }
@@ -802,8 +914,48 @@
     margin-top: 1px;
   }
 
+  .status-step strong {
+    font-size: 12px;
+  }
+
+  .status-step span {
+    font-size: 11px;
+  }
+
+  .delivery-placeholder p {
+    font-size: 12px;
+  }
+
+  .success-note p {
+    font-size: 11px;
+  }
+
   .success-summary h2 {
     font-size: 36px;
+  }
+
+  .success-summary > p {
+    font-size: 11px;
+  }
+
+  .summary-row span {
+    font-size: 10px;
+  }
+
+  .summary-row strong {
+    font-size: 11px;
+  }
+
+  .success-button {
+    font-size: 10px;
+  }
+
+  .success-footer-message span {
+    font-size: 18px;
+  }
+
+  .success-footer-message p {
+    font-size: 10px;
   }
 }
 

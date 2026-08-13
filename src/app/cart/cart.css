@@ -1,6 +1,7 @@
 /* =========================================================
    HOUSE OF LUCÉRA
    CART PAGE
+   LUXURY TYPOGRAPHY EDITION
 ========================================================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap");
@@ -33,16 +34,24 @@
 
 .cart-page {
   width: 100%;
+
   background: var(--cart-white);
+
   color: var(--cart-text);
 
   font-family:
     "Montserrat",
     Arial,
     sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.6;
 }
 
-.cart-page * {
+.cart-page *,
+.cart-page *::before,
+.cart-page *::after {
   box-sizing: border-box;
 }
 
@@ -68,10 +77,10 @@
 .cart-hero {
   min-height: 245px;
 
+  position: relative;
+
   display: flex;
   align-items: center;
-
-  position: relative;
 
   overflow: hidden;
 
@@ -135,19 +144,25 @@
   display: flex;
   align-items: center;
 
-  gap: 8px;
+  gap: 9px;
 
   margin-bottom: 30px;
 
-  font-size: 7px;
-
   color: #706963;
+
+  font-size: 11px;
+
+  font-weight: 500;
 
   letter-spacing: 0.2px;
 }
 
 .cart-breadcrumb span {
   color: #aaa39d;
+}
+
+.cart-breadcrumb a {
+  transition: color 0.25s ease;
 }
 
 .cart-breadcrumb a:hover {
@@ -160,21 +175,23 @@
 ========================================================= */
 
 .cart-title {
-  max-width: 600px;
+  max-width: 650px;
 }
 
 .cart-title > span {
   display: block;
 
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 
   color: var(--cart-gold);
 
-  font-size: 8px;
+  font-size: 11px;
 
   font-weight: 600;
 
-  letter-spacing: 2.5px;
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
 }
 
 .cart-title h1 {
@@ -185,25 +202,25 @@
     Georgia,
     serif;
 
-  font-size: clamp(48px, 6vw, 76px);
+  font-size: clamp(52px, 6vw, 82px);
 
   font-weight: 500;
 
-  line-height: 0.85;
+  line-height: 0.88;
 
-  letter-spacing: -1px;
+  letter-spacing: -1.2px;
 }
 
 .cart-title p {
-  max-width: 390px;
+  max-width: 450px;
 
-  margin: 18px 0 0;
+  margin: 20px 0 0;
 
   color: #635d58;
 
-  font-size: 9px;
+  font-size: 13px;
 
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 
@@ -226,39 +243,46 @@
 
 .cart-content-header {
   display: flex;
+
   align-items: flex-end;
+
   justify-content: space-between;
 
-  margin-bottom: 30px;
+  gap: 20px;
+
+  margin-bottom: 32px;
 }
 
 .small-heading {
   color: var(--cart-gold);
 
-  font-size: 8px;
+  font-size: 11px;
 
   font-weight: 600;
 
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
 }
 
 .cart-content-header h2 {
-  margin: 8px 0 0;
+  margin: 9px 0 0;
 
   font-family:
     "Cormorant Garamond",
     Georgia,
     serif;
 
-  font-size: 39px;
+  font-size: 43px;
 
   font-weight: 500;
 
-  line-height: 0.9;
+  line-height: 0.95;
 }
 
 .continue-shopping {
   display: flex;
+
   align-items: center;
 
   gap: 9px;
@@ -267,7 +291,7 @@
 
   border-bottom: 1px solid #222;
 
-  font-size: 8px;
+  font-size: 11px;
 
   font-weight: 600;
 
@@ -373,15 +397,17 @@
 .cart-item-category {
   display: block;
 
-  margin-bottom: 8px;
+  margin-bottom: 9px;
 
   color: var(--cart-gold);
 
-  font-size: 7px;
+  font-size: 10px;
 
   font-weight: 600;
 
-  letter-spacing: 1.4px;
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
 }
 
 .cart-item-details h3 {
@@ -392,11 +418,11 @@
     Georgia,
     serif;
 
-  font-size: 25px;
+  font-size: 28px;
 
   font-weight: 600;
 
-  line-height: 1;
+  line-height: 1.05;
 
   transition: color 0.25s ease;
 }
@@ -413,13 +439,17 @@
 .cart-item-options {
   display: flex;
 
+  flex-wrap: wrap;
+
   gap: 18px;
 
-  margin-top: 15px;
+  margin-top: 17px;
 
   color: #6e6964;
 
-  font-size: 7px;
+  font-size: 10px;
+
+  line-height: 1.5;
 }
 
 .cart-item-options strong {
@@ -447,6 +477,8 @@
 
   align-items: center;
 
+  flex-wrap: wrap;
+
   gap: 17px;
 
   margin-top: 30px;
@@ -458,21 +490,23 @@
 ========================================================= */
 
 .quantity-control {
-  height: 30px;
+  height: 32px;
 
   display: flex;
+
   align-items: center;
 
   border: 1px solid #ded8d3;
 }
 
 .quantity-control button {
-  width: 29px;
-  height: 28px;
+  width: 31px;
+  height: 30px;
 
   padding: 0;
 
   display: grid;
+
   place-items: center;
 
   border: 0;
@@ -493,11 +527,11 @@
 }
 
 .quantity-control span {
-  min-width: 28px;
+  min-width: 31px;
 
   text-align: center;
 
-  font-size: 8px;
+  font-size: 11px;
 
   font-weight: 600;
 }
@@ -511,9 +545,10 @@
   padding: 0;
 
   display: flex;
+
   align-items: center;
 
-  gap: 5px;
+  gap: 6px;
 
   border: 0;
 
@@ -521,7 +556,7 @@
 
   color: #77716c;
 
-  font-size: 6px;
+  font-size: 9px;
 
   font-weight: 600;
 
@@ -550,7 +585,7 @@
 }
 
 .cart-item-total strong {
-  font-size: 11px;
+  font-size: 15px;
 
   font-weight: 600;
 }
@@ -562,11 +597,12 @@
 
 .free-delivery-note {
   display: flex;
+
   align-items: center;
 
   gap: 13px;
 
-  padding: 15px 18px;
+  padding: 16px 18px;
 
   margin-top: 5px;
 
@@ -588,7 +624,7 @@
 
   color: #292522;
 
-  font-size: 7px;
+  font-size: 10px;
 
   font-weight: 600;
 }
@@ -598,7 +634,7 @@
 
   color: #77716c;
 
-  font-size: 6px;
+  font-size: 9px;
 
   line-height: 1.6;
 }
@@ -633,11 +669,11 @@
     Georgia,
     serif;
 
-  font-size: 35px;
+  font-size: 38px;
 
   font-weight: 500;
 
-  line-height: 0.9;
+  line-height: 0.95;
 }
 
 
@@ -660,7 +696,7 @@
 
   margin-bottom: 13px;
 
-  font-size: 8px;
+  font-size: 11px;
 }
 
 .summary-lines > div:last-child {
@@ -698,9 +734,13 @@
 }
 
 .summary-total span {
-  font-size: 9px;
+  font-size: 12px;
 
   font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
 }
 
 .summary-total strong {
@@ -709,7 +749,7 @@
     Georgia,
     serif;
 
-  font-size: 28px;
+  font-size: 32px;
 
   font-weight: 600;
 }
@@ -744,6 +784,7 @@
   flex: 0 0 auto;
 
   display: grid;
+
   place-items: center;
 
   border: 1px solid rgba(185, 151, 75, 0.4);
@@ -757,7 +798,7 @@
     Georgia,
     serif;
 
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .summary-flexpay > div:nth-child(2) {
@@ -769,7 +810,7 @@
 
   margin-bottom: 3px;
 
-  font-size: 7px;
+  font-size: 10px;
 
   font-weight: 600;
 }
@@ -779,7 +820,7 @@
 
   color: #77716d;
 
-  font-size: 6px;
+  font-size: 8px;
 
   line-height: 1.6;
 }
@@ -804,15 +845,17 @@
 
   color: #5d5752;
 
-  font-size: 6px;
+  font-size: 9px;
 
   font-weight: 600;
 
   letter-spacing: 1px;
+
+  text-transform: uppercase;
 }
 
 .coupon-input {
-  height: 37px;
+  height: 40px;
 
   display: flex;
 
@@ -836,7 +879,7 @@
 
   color: #222;
 
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .coupon-input input::placeholder {
@@ -844,7 +887,7 @@
 }
 
 .coupon-input button {
-  width: 65px;
+  width: 75px;
 
   padding: 0;
 
@@ -854,7 +897,7 @@
 
   color: var(--cart-gold);
 
-  font-size: 6px;
+  font-size: 8px;
 
   font-weight: 700;
 
@@ -878,17 +921,28 @@
 
   color: #65805e;
 
-  font-size: 6px;
+  font-size: 8px;
 }
 
 
 /* =========================================================
    CHECKOUT BUTTON
 ========================================================= */
+.checkout-button,
+.checkout-button:visited,
+.checkout-button:hover,
+.checkout-button:active {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.checkout-button svg {
+  color: #ffffff;
+  stroke: #ffffff;
+}
 
 .checkout-button {
   min-height: 47px;
-
   width: 100%;
 
   display: flex;
@@ -899,12 +953,10 @@
 
   background: var(--cart-black);
 
-  color: var(--cart-white);
+  color: #ffffff;
 
   font-size: 7px;
-
   font-weight: 600;
-
   letter-spacing: 0.6px;
 
   transition:
@@ -914,6 +966,7 @@
 
 .checkout-button:hover {
   background: var(--cart-gold);
+  color: #ffffff;
 
   transform: translateY(-2px);
 }
@@ -927,6 +980,7 @@
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   gap: 6px;
@@ -935,7 +989,7 @@
 
   color: #8b847e;
 
-  font-size: 6px;
+  font-size: 8px;
 }
 
 
@@ -951,6 +1005,7 @@
   flex-direction: column;
 
   align-items: center;
+
   justify-content: center;
 
   text-align: center;
@@ -972,6 +1027,7 @@
   margin-bottom: 22px;
 
   display: grid;
+
   place-items: center;
 
   border: 1px solid #d9c8a6;
@@ -989,31 +1045,34 @@
     Georgia,
     serif;
 
-  font-size: 43px;
+  font-size: 47px;
 
   font-weight: 500;
+
+  line-height: 1;
 }
 
 .empty-cart p {
-  max-width: 350px;
+  max-width: 380px;
 
   margin: 0;
 
   color: var(--cart-muted);
 
-  font-size: 8px;
+  font-size: 11px;
 
   line-height: 1.9;
 }
 
 .cart-primary-button {
-  min-height: 43px;
+  min-height: 45px;
 
   margin-top: 25px;
 
-  padding: 0 20px;
+  padding: 0 22px;
 
   display: inline-flex;
+
   align-items: center;
 
   gap: 10px;
@@ -1022,9 +1081,11 @@
 
   color: #fff;
 
-  font-size: 7px;
+  font-size: 9px;
 
   font-weight: 600;
+
+  letter-spacing: 0.5px;
 
   transition:
     background 0.25s ease,
@@ -1043,7 +1104,7 @@
 ========================================================= */
 
 .cart-benefits {
-  min-height: 105px;
+  min-height: 110px;
 
   padding: 0 5%;
 
@@ -1063,6 +1124,7 @@
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   gap: 11px;
@@ -1076,12 +1138,13 @@
 }
 
 .cart-benefit-icon {
-  width: 35px;
-  height: 35px;
+  width: 38px;
+  height: 38px;
 
   flex: 0 0 auto;
 
   display: grid;
+
   place-items: center;
 
   color: var(--cart-gold);
@@ -1096,7 +1159,7 @@
 
   margin-bottom: 4px;
 
-  font-size: 6px;
+  font-size: 11px;
 
   font-weight: 700;
 
@@ -1108,7 +1171,7 @@
 
   color: #716b66;
 
-  font-size: 6px;
+  font-size: 10px;
 
   line-height: 1.7;
 }
@@ -1142,13 +1205,12 @@
   }
 
   .cart-item-details h3 {
-    font-size: 22px;
+    font-size: 25px;
   }
 
   .order-summary {
     padding: 25px 20px;
   }
-
 }
 
 
@@ -1186,7 +1248,6 @@
 
     gap: 25px;
   }
-
 }
 
 
@@ -1209,23 +1270,25 @@
   .cart-breadcrumb {
     margin-bottom: 23px;
 
-    font-size: 6.5px;
+    font-size: 9px;
   }
 
   .cart-title > span {
-    font-size: 7px;
+    font-size: 9px;
 
     letter-spacing: 2px;
   }
 
   .cart-title h1 {
-    font-size: 49px;
+    font-size: 50px;
+
+    letter-spacing: -0.7px;
   }
 
   .cart-title p {
     max-width: 290px;
 
-    font-size: 8px;
+    font-size: 11px;
 
     line-height: 1.8;
   }
@@ -1250,12 +1313,16 @@
     margin-bottom: 25px;
   }
 
+  .small-heading {
+    font-size: 9px;
+  }
+
   .cart-content-header h2 {
-    font-size: 34px;
+    font-size: 36px;
   }
 
   .continue-shopping {
-    font-size: 6px;
+    font-size: 8px;
 
     margin-top: 6px;
   }
@@ -1286,11 +1353,11 @@
   .cart-item-category {
     margin-bottom: 6px;
 
-    font-size: 6px;
+    font-size: 8px;
   }
 
   .cart-item-details h3 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .cart-item-options {
@@ -1300,7 +1367,7 @@
 
     margin-top: 12px;
 
-    font-size: 6px;
+    font-size: 8px;
   }
 
   .cart-item-price-mobile {
@@ -1308,7 +1375,7 @@
 
     margin-top: 12px;
 
-    font-size: 9px;
+    font-size: 11px;
 
     font-weight: 600;
   }
@@ -1322,23 +1389,23 @@
   }
 
   .quantity-control {
-    height: 28px;
+    height: 30px;
   }
 
   .quantity-control button {
-    width: 27px;
+    width: 28px;
 
-    height: 26px;
+    height: 28px;
   }
 
   .quantity-control span {
-    min-width: 25px;
+    min-width: 27px;
 
-    font-size: 7px;
+    font-size: 9px;
   }
 
   .item-action {
-    font-size: 5.5px;
+    font-size: 7px;
   }
 
   .cart-item-total {
@@ -1355,11 +1422,11 @@
   }
 
   .free-delivery-note strong {
-    font-size: 6.5px;
+    font-size: 9px;
   }
 
   .free-delivery-note p {
-    font-size: 5.5px;
+    font-size: 8px;
   }
 
 
@@ -1370,21 +1437,25 @@
   }
 
   .summary-heading h2 {
-    font-size: 33px;
+    font-size: 35px;
 
     margin-bottom: 23px;
   }
 
   .summary-lines > div {
-    font-size: 7px;
+    font-size: 9px;
   }
 
   .summary-total {
     padding: 18px 0;
   }
 
+  .summary-total span {
+    font-size: 10px;
+  }
+
   .summary-total strong {
-    font-size: 26px;
+    font-size: 29px;
   }
 
   .summary-flexpay {
@@ -1393,14 +1464,26 @@
     margin-bottom: 20px;
   }
 
+  .summary-flexpay strong {
+    font-size: 9px;
+  }
+
+  .summary-flexpay p {
+    font-size: 7px;
+  }
+
+  .coupon-section label {
+    font-size: 8px;
+  }
+
   .coupon-input {
-    height: 36px;
+    height: 38px;
   }
 
   .checkout-button {
     min-height: 48px;
 
-    font-size: 6.5px;
+    font-size: 8px;
   }
 
 
@@ -1427,13 +1510,12 @@
   }
 
   .cart-benefit strong {
-    font-size: 5.5px;
+    font-size: 8px;
   }
 
   .cart-benefit p {
-    font-size: 5.5px;
+    font-size: 7px;
   }
-
 }
 
 
@@ -1447,20 +1529,24 @@
     min-height: 205px;
   }
 
+  .cart-title > span {
+    font-size: 8px;
+  }
+
   .cart-title h1 {
-    font-size: 43px;
+    font-size: 44px;
   }
 
   .cart-title p {
-    font-size: 7px;
+    font-size: 10px;
   }
 
   .cart-content-header h2 {
-    font-size: 31px;
+    font-size: 32px;
   }
 
   .continue-shopping {
-    font-size: 5.5px;
+    font-size: 7px;
   }
 
   .cart-item {
@@ -1476,7 +1562,11 @@
   }
 
   .cart-item-details h3 {
-    font-size: 18px;
+    font-size: 20px;
+  }
+
+  .cart-item-options {
+    font-size: 7px;
   }
 
   .cart-item-actions {
@@ -1488,8 +1578,8 @@
   }
 
   .item-action {
-    width: 25px;
-    height: 25px;
+    width: 27px;
+    height: 27px;
 
     justify-content: center;
 
@@ -1502,8 +1592,12 @@
     margin-right: auto;
   }
 
+  .summary-heading h2 {
+    font-size: 33px;
+  }
+
   .summary-total strong {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .cart-benefits {
@@ -1515,7 +1609,6 @@
   .cart-benefit {
     justify-content: center;
   }
-
 }
 
 
@@ -1536,5 +1629,4 @@
 
     animation-iteration-count: 1 !important;
   }
-
 }

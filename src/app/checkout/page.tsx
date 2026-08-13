@@ -642,13 +642,13 @@ export default function CheckoutPage() {
                   }
                 />
 
-                <span className="custom-checkbox">
+                {/* <span className="custom-checkbox">
                   {sameAddress && <Check size={11} />}
                 </span>
 
-                <span>
+                <span className="address-same">
                   Billing address is the same as delivery address
-                </span>
+                </span> */}
 
               </label>
 
@@ -753,7 +753,7 @@ export default function CheckoutPage() {
 
               {/* PROMO */}
 
-              <div className="promo-box">
+              {/* <div className="promo-box">
 
                 <label>
                   Promo Code
@@ -770,7 +770,7 @@ export default function CheckoutPage() {
                   </button>
                 </div>
 
-              </div>
+              </div> */}
 
 
               {/* TOTALS */}

@@ -40,7 +40,7 @@ export default function Header() {
 
         <span className="promo-spacer" />
 
-        <div>✦ FREE DELIVERY ON ORDERS ₦100,000+</div>
+        {/* <div>✦ FREE DELIVERY ON ORDERS ₦100,000+</div> */}
       </div>
 
       {/* =========================

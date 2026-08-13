@@ -2,11 +2,13 @@
    HOUSE OF LUCÉRA
    SHARED FOOTER
 ========================================================= */
+
 .site-footer {
   background: #080808;
   color: #ffffff;
   margin-top: 0;
 }
+
 
 /* =========================================================
    NEWSLETTER
@@ -39,7 +41,7 @@
   display: block;
   margin-bottom: 10px;
 
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 2px;
 
@@ -51,9 +53,9 @@
 
   font-family: "Cormorant Garamond", Georgia, serif;
 
-  font-size: clamp(35px, 4vw, 52px);
+  font-size: clamp(38px, 4vw, 54px);
   font-weight: 600;
-  line-height: 0.9;
+  line-height: 0.95;
 }
 
 .footer-newsletter-copy p {
@@ -61,11 +63,12 @@
 
   max-width: 380px;
 
-  font-size: 9px;
+  font-size: 13px;
   line-height: 1.8;
 
   color: #5f5954;
 }
+
 
 /* =========================================================
    NEWSLETTER FORM
@@ -83,7 +86,7 @@
 .newsletter-input-wrap {
   flex: 1;
 
-  min-height: 43px;
+  min-height: 45px;
 
   display: flex;
   align-items: center;
@@ -120,7 +123,7 @@
 
   background: transparent;
 
-  font-size: 8px;
+  font-size: 13px;
 
   color: #111111;
 }
@@ -130,7 +133,7 @@
 }
 
 .newsletter-form button {
-  min-width: 105px;
+  min-width: 115px;
 
   border: 0;
 
@@ -145,7 +148,7 @@
 
   padding: 0 13px;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.5px;
 
@@ -158,6 +161,7 @@
   background: #b9974b;
   transform: translateY(-2px);
 }
+
 
 /* =========================================================
    MAIN FOOTER
@@ -184,6 +188,7 @@
 
   gap: 55px;
 }
+
 
 /* =========================================================
    FOOTER BRAND
@@ -219,9 +224,10 @@
 
   color: #aaa39d;
 
-  font-size: 8px;
+  font-size: 12px;
   line-height: 1.9;
 }
+
 
 /* =========================================================
    SOCIAL ICONS
@@ -235,8 +241,8 @@
 }
 
 .footer-socials a {
-  width: 29px;
-  height: 29px;
+  width: 31px;
+  height: 31px;
 
   border: 1px solid #393633;
 
@@ -262,6 +268,7 @@
   transform: translateY(-3px);
 }
 
+
 /* =========================================================
    FOOTER COLUMNS
 ========================================================= */
@@ -269,7 +276,7 @@
 .footer-column h3 {
   margin: 0 0 19px;
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 700;
 
   letter-spacing: 1.5px;
@@ -289,7 +296,7 @@
 
   color: #aaa39d;
 
-  font-size: 8px;
+  font-size: 12px;
 
   transition:
     color 0.25s ease,
@@ -300,6 +307,7 @@
   color: #b9974b;
   padding-left: 4px;
 }
+
 
 /* =========================================================
    CUSTOMER CARE
@@ -321,8 +329,8 @@
 
   color: #aaa39d;
 
-  font-size: 8px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.6;
 
   transition: color 0.25s ease;
 }
@@ -335,10 +343,11 @@
 .footer-address svg {
   flex-shrink: 0;
 
-  margin-top: 1px;
+  margin-top: 2px;
 
   color: #b9974b;
 }
+
 
 /* =========================================================
    BOTTOM BAR
@@ -364,30 +373,28 @@
 
 .footer-bottom p {
   margin: 0;
-
+  font-weight: bold;
+  font-size: 11px;
   color: #77716c;
-
-  font-size: 7px;
 }
 
 .footer-legal {
   display: flex;
   align-items: center;
-
   gap: 22px;
 }
 
 .footer-legal a {
   color: #77716c;
-
-  font-size: 7px;
-
+  font-weight: bold;
+  font-size: 11px;
   transition: color 0.25s ease;
 }
 
 .footer-legal a:hover {
   color: #b9974b;
 }
+
 
 /* =========================================================
    TABLET
@@ -415,6 +422,7 @@
 
 }
 
+
 /* =========================================================
    MOBILE
 ========================================================= */
@@ -435,12 +443,17 @@
     gap: 30px;
   }
 
+  .footer-eyebrow {
+    font-size: 9px;
+  }
+
   .footer-newsletter-copy h2 {
     font-size: 42px;
   }
 
   .footer-newsletter-copy p {
-    font-size: 8px;
+    font-size: 13px;
+    line-height: 1.8;
   }
 
   .newsletter-form {
@@ -452,12 +465,19 @@
   }
 
   .newsletter-input-wrap {
-    min-height: 45px;
+    min-height: 47px;
+  }
+
+  .newsletter-input-wrap input {
+    font-size: 13px;
   }
 
   .newsletter-form button {
-    min-height: 42px;
+    min-height: 44px;
+
+    font-size: 11px;
   }
+
 
   /* Main footer */
 
@@ -479,11 +499,27 @@
 
   .footer-brand p {
     max-width: 350px;
+
+    font-size: 13px;
+  }
+
+  .footer-column h3 {
+    font-size: 11px;
+  }
+
+  .footer-column nav a {
+    font-size: 12px;
   }
 
   .footer-contact {
     grid-column: auto;
   }
+
+  .footer-contact > a,
+  .footer-address {
+    font-size: 12px;
+  }
+
 
   /* Bottom */
 
@@ -497,13 +533,22 @@
     gap: 12px;
   }
 
+  .footer-bottom p {
+    font-size: 10px;
+  }
+
   .footer-legal {
     gap: 16px;
 
     flex-wrap: wrap;
   }
 
+  .footer-legal a {
+    font-size: 10px;
+  }
+
 }
+
 
 /* =========================================================
    SMALL MOBILE
@@ -511,8 +556,16 @@
 
 @media (max-width: 420px) {
 
+  .footer-eyebrow {
+    font-size: 9px;
+  }
+
   .footer-newsletter-copy h2 {
     font-size: 37px;
+  }
+
+  .footer-newsletter-copy p {
+    font-size: 12px;
   }
 
   .footer-container {
@@ -526,9 +579,22 @@
     grid-column: auto;
   }
 
+  .footer-brand p {
+    font-size: 12px;
+  }
+
+  .footer-column nav a {
+    font-size: 12px;
+  }
+
+  .footer-contact > a,
+  .footer-address {
+    font-size: 12px;
+  }
+
   .footer-bottom p,
   .footer-legal a {
-    font-size: 6.5px;
+    font-size: 9px;
   }
 
 }

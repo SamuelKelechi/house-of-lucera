@@ -1,0 +1,2258 @@
+/* =========================================================
+   HOUSE OF LUCÉRA
+   FLEXPAY PAGE
+   COMPLETE RESPONSIVE STYLES
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+.flexpay-page {
+
+  --flex-black: #080808;
+  --flex-dark: #111111;
+
+  --flex-gold: #b9974b;
+  --flex-light-gold: #c9aa65;
+
+  --flex-cream: #f5ede6;
+  --flex-soft-cream: #faf7f4;
+
+  --flex-border: #e7e1dc;
+
+  --flex-muted: #716c67;
+
+  --flex-white: #ffffff;
+
+  color: var(--flex-black);
+
+  background: #ffffff;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   BOX SIZING
+========================================================= */
+
+.flexpay-page *,
+.flexpay-page *::before,
+.flexpay-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.flexpay-hero {
+
+  height: 390px;
+  min-height: 390px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(420px, 0.82fr);
+
+  background: var(--flex-cream);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.flexpay-hero-content {
+
+  width: min(720px, 90%);
+
+  margin-left: auto;
+
+  padding:
+    24px
+    6%
+    35px
+    5%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.flexpay-breadcrumb {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 27px;
+
+  color: #716c67;
+
+  font-size: 10px;
+
+  line-height: 1;
+}
+
+
+.flexpay-breadcrumb a:hover {
+  color: var(--flex-gold);
+}
+
+
+.flexpay-breadcrumb span:first-of-type {
+  color: #aaa39d;
+}
+
+
+/* =========================================================
+   HERO COPY
+========================================================= */
+
+.flexpay-hero-copy {
+  max-width: 540px;
+}
+
+
+.flexpay-eyebrow {
+
+  display: block;
+
+  margin-bottom: 11px;
+
+  color: var(--flex-black);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.7px;
+
+  text-transform: uppercase;
+}
+
+
+.flexpay-hero-copy h1 {
+
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: clamp(48px, 5vw, 65px);
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -1.5px;
+}
+
+
+.flexpay-hero-copy p {
+
+  margin: 18px 0 0;
+
+  max-width: 460px;
+
+  color: #5f5a55;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.flexpay-hero-actions {
+
+  margin-top: 23px;
+
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+
+.flexpay-button {
+
+  min-height: 42px;
+
+  padding:
+    0 20px;
+
+  border: 1px solid var(--flex-black);
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.6px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.flexpay-button:hover {
+  transform: translateY(-2px);
+}
+
+
+.flexpay-button-dark {
+
+  background: var(--flex-black);
+
+  color: white;
+}
+
+
+.flexpay-button-dark:hover {
+
+  background: var(--flex-gold);
+
+  border-color: var(--flex-gold);
+}
+
+
+.flexpay-button-light {
+
+  background: transparent;
+
+  border-color: #cdbca7;
+
+  color: #4e4945;
+}
+
+
+.flexpay-button-light:hover {
+
+  background: white;
+
+  border-color: var(--flex-gold);
+
+  color: var(--flex-gold);
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   IMPORTANT:
+   IMAGE IS FORCED TO FILL THE HERO HEIGHT
+========================================================= */
+
+.flexpay-hero-image {
+
+  position: relative;
+
+  height: 390px;
+  min-height: 390px;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+.flexpay-hero-image::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(245, 237, 230, 0.15),
+      transparent 30%
+    );
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+.flexpay-hero-image img {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  max-width: none;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center center;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.flexpay-benefits {
+
+  width: min(1440px, 94%);
+
+  min-height: 68px;
+
+  margin:
+    7px auto
+    0;
+
+  padding:
+    10px 22px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 15px;
+
+  background: var(--flex-black);
+
+  border-radius: 5px;
+
+  color: white;
+}
+
+
+.flexpay-benefit {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 0;
+}
+
+
+.flexpay-benefit-icon {
+
+  width: 30px;
+
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid
+    rgba(185, 151, 75, 0.55);
+
+  border-radius: 50%;
+
+  color: var(--flex-gold);
+}
+
+
+.flexpay-benefit strong {
+
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: white;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+}
+
+
+.flexpay-benefit p {
+
+  margin: 0;
+
+  color: #bcb7b2;
+
+  font-size: 8px;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.flexpay-section-heading,
+.flexpay-payment-heading,
+.flexpay-how-heading {
+
+  text-align: center;
+}
+
+
+.flexpay-section-heading > span,
+.flexpay-payment-heading > span,
+.flexpay-how-heading > span {
+
+  display: block;
+
+  color: var(--flex-gold);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+.flexpay-section-heading h2,
+.flexpay-payment-heading h2,
+.flexpay-how-heading h2 {
+
+  margin: 8px 0 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 32px;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   PRODUCT SELECTION
+========================================================= */
+
+.flexpay-selection {
+
+  width: min(1200px, 92%);
+
+  margin: auto;
+
+  padding:
+    30px 0
+    20px;
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.flexpay-tabs {
+
+  margin:
+    16px auto
+    16px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 48px;
+}
+
+
+.flexpay-tabs button {
+
+  position: relative;
+
+  padding:
+    0
+    0
+    10px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #6f6964;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.flexpay-tabs button::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  height: 1px;
+
+  background: var(--flex-gold);
+
+  transform:
+    scaleX(0);
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.flexpay-tabs button.active {
+
+  color: var(--flex-black);
+}
+
+
+.flexpay-tabs button.active::after {
+
+  transform:
+    scaleX(1);
+}
+
+
+/* =========================================================
+   PRODUCT WRAPPER
+========================================================= */
+
+.flexpay-product-wrapper {
+
+  display: grid;
+
+  grid-template-columns:
+    30px
+    minmax(0, 1fr)
+    30px;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.flexpay-carousel-arrow {
+
+  width: 30px;
+
+  height: 40px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #4d4945;
+
+  display: grid;
+
+  place-items: center;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.flexpay-carousel-arrow:hover {
+
+  color: var(--flex-gold);
+
+  transform: scale(1.1);
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.flexpay-product-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.flexpay-product-card {
+
+  position: relative;
+
+  min-width: 0;
+
+  padding: 0;
+
+  border: 1px solid #e8e3df;
+
+  border-radius: 4px;
+
+  overflow: hidden;
+
+  background: white;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.flexpay-product-card:hover {
+
+  transform:
+    translateY(-3px);
+
+  border-color:
+    #d2c2ac;
+}
+
+
+.flexpay-product-card.selected {
+
+  border-color:
+    var(--flex-gold);
+
+  box-shadow:
+    0 4px 18px
+    rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.flexpay-product-image {
+
+  position: relative;
+
+  height: 165px;
+
+  overflow: hidden;
+
+  background: #f1e9e2;
+}
+
+
+.flexpay-product-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.flexpay-product-card:hover
+.flexpay-product-image img {
+
+  transform:
+    scale(1.035);
+}
+
+
+.flexpay-product-heart {
+
+  position: absolute;
+
+  top: 7px;
+
+  right: 7px;
+
+  width: 24px;
+
+  height: 24px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,0.88);
+
+  color: #8a837d;
+}
+
+
+/* =========================================================
+   PRODUCT INFO
+========================================================= */
+
+.flexpay-product-info {
+
+  padding:
+    10px 10px 12px;
+}
+
+
+.flexpay-product-info h3 {
+
+  margin: 0 0 7px;
+
+  color: var(--flex-black);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  line-height: 1.05;
+}
+
+
+.flexpay-product-info strong {
+
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+.flexpay-product-info span {
+
+  display: block;
+
+  color: #77716c;
+
+  font-size: 8px;
+
+  margin-bottom: 2px;
+}
+
+
+.flexpay-product-info b {
+
+  display: block;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PAYMENT SECTION
+========================================================= */
+
+.flexpay-payment {
+
+  width: min(1200px, 92%);
+
+  margin: auto;
+
+  padding:
+    15px 0
+    38px;
+}
+
+
+.flexpay-payment-box {
+
+  margin-top: 20px;
+
+  padding:
+    28px 25px
+    21px;
+
+  border: 1px solid
+    var(--flex-border);
+
+  border-radius: 5px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    0.75fr
+    1.65fr;
+
+  grid-template-rows:
+    auto
+    auto;
+
+  column-gap: 30px;
+
+  row-gap: 19px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   PAYMENT PRODUCT
+========================================================= */
+
+.flexpay-payment-product {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+.flexpay-payment-image {
+
+  width: 110px;
+
+  height: 110px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  background: #eee7e1;
+
+  border-radius: 3px;
+}
+
+
+.flexpay-payment-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.flexpay-payment-product-info strong {
+
+  display: block;
+
+  margin-bottom: 16px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+
+.flexpay-payment-product-info span {
+
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #77716c;
+
+  font-size: 8px;
+}
+
+
+.flexpay-payment-product-info b {
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PLAN SELECTOR
+========================================================= */
+
+.flexpay-plan-selector {
+
+  align-self: start;
+}
+
+
+.flexpay-plan-selector label {
+
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 8px;
+
+  color: #5f5a55;
+}
+
+
+.flexpay-select {
+
+  position: relative;
+}
+
+
+.flexpay-select select {
+
+  width: 100%;
+
+  height: 34px;
+
+  padding:
+    0 28px
+    0 9px;
+
+  appearance: none;
+
+  border: 1px solid #ded7d1;
+
+  background: white;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+
+.flexpay-select svg {
+
+  position: absolute;
+
+  right: 8px;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  pointer-events: none;
+
+  color: #77716c;
+}
+
+
+/* =========================================================
+   PAYMENT TABLE
+========================================================= */
+
+.flexpay-table-wrapper {
+
+  min-width: 0;
+}
+
+
+.flexpay-table-head,
+.flexpay-table-row {
+
+  display: grid;
+
+  grid-template-columns:
+    1.05fr
+    1fr
+    0.85fr
+    0.7fr;
+
+  gap: 10px;
+
+  align-items: center;
+}
+
+
+.flexpay-table-head {
+
+  padding-bottom: 9px;
+
+  border-bottom: 1px solid
+    var(--flex-border);
+
+  color: #77716c;
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+}
+
+
+.flexpay-table-row {
+
+  min-height: 29px;
+
+  border-bottom: 1px solid
+    #f1ede9;
+
+  color: #4f4a46;
+
+  font-size: 8px;
+}
+
+
+.flexpay-table-row span:last-child {
+
+  color: #77716c;
+}
+
+
+.flexpay-table-row span:last-child.paid {
+
+  color: var(--flex-gold);
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   START BUTTON
+========================================================= */
+
+.flexpay-start-button {
+
+  grid-column:
+    2 / 4;
+
+  justify-self: start;
+
+  min-height: 40px;
+
+  padding:
+    0 23px;
+
+  border: 1px solid
+    var(--flex-black);
+
+  background: var(--flex-black);
+
+  color: white;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.flexpay-start-button:hover {
+
+  background: var(--flex-gold);
+
+  border-color: var(--flex-gold);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.flexpay-how {
+
+  width: min(1200px, 92%);
+
+  margin: auto;
+
+  padding:
+    30px 0
+    60px;
+}
+
+
+.flexpay-steps {
+
+  margin-top: 29px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+
+.flexpay-step {
+
+  position: relative;
+
+  padding:
+    26px 20px;
+
+  border-top:
+    1px solid
+    var(--flex-border);
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff,
+      #faf8f6
+    );
+}
+
+
+.flexpay-step-number {
+
+  margin-bottom: 18px;
+
+  color: var(--flex-gold);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+
+.flexpay-step > svg {
+
+  color: var(--flex-gold);
+
+  margin-bottom: 13px;
+}
+
+
+.flexpay-step h3 {
+
+  margin: 0 0 8px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+
+.flexpay-step p {
+
+  margin: 0;
+
+  color: var(--flex-muted);
+
+  font-size: 9px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FINAL CTA
+   IMPORTANT:
+   THE IMAGE AND CONTENT SHARE THE SAME FIXED HEIGHT
+========================================================= */
+
+.flexpay-final-cta {
+
+  height: 310px;
+  min-height: 310px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    0.85fr;
+
+  background:
+    var(--flex-black);
+
+  color: white;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   FINAL CTA CONTENT
+========================================================= */
+
+.flexpay-final-content {
+
+  width: min(620px, 90%);
+
+  height: 310px;
+
+  margin-left: auto;
+
+  padding:
+    35px
+    8%
+    35px
+    5%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-width: 0;
+}
+
+
+.flexpay-final-content > span {
+
+  margin-bottom: 9px;
+
+  color: var(--flex-gold);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+.flexpay-final-content h2 {
+
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: clamp(42px, 4vw, 55px);
+
+  font-weight: 500;
+
+  line-height: 0.88;
+
+  text-transform: uppercase;
+}
+
+
+.flexpay-final-content p {
+
+  margin: 15px 0 19px;
+
+  color: #c2bdb8;
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FINAL CTA BUTTON
+========================================================= */
+
+.flexpay-final-button {
+
+  width: fit-content;
+
+  min-height: 39px;
+
+  padding:
+    0 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--flex-gold);
+
+  color: white;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.6px;
+
+  text-transform: uppercase;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.flexpay-final-button:hover {
+
+  background:
+    var(--flex-light-gold);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================================
+   FINAL CTA IMAGE
+   IMAGE ALWAYS FILLS SECTION
+========================================================= */
+
+.flexpay-final-image {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 310px;
+  min-height: 310px;
+
+  overflow: hidden;
+}
+
+
+.flexpay-final-image img {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  max-width: none;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center 25%;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .flexpay-hero {
+
+    height: 380px;
+    min-height: 380px;
+
+    grid-template-columns:
+      1fr
+      0.8fr;
+  }
+
+
+  .flexpay-hero-image {
+
+    height: 380px;
+    min-height: 380px;
+  }
+
+
+  .flexpay-hero-copy h1 {
+
+    font-size: 52px;
+  }
+
+
+  .flexpay-benefits {
+
+    width: 94%;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    padding:
+      14px 20px;
+  }
+
+
+  .flexpay-product-grid {
+
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+
+  .flexpay-product-image {
+
+    height: 145px;
+  }
+
+
+  .flexpay-payment-box {
+
+    grid-template-columns:
+      1fr 0.8fr;
+
+    grid-template-rows:
+      auto
+      auto
+      auto;
+  }
+
+
+  .flexpay-table-wrapper {
+
+    grid-column:
+      1 / -1;
+  }
+
+
+  .flexpay-start-button {
+
+    grid-column:
+      1 / -1;
+
+    justify-self:
+      center;
+  }
+
+
+  .flexpay-steps {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  /* Final CTA */
+
+  .flexpay-final-cta {
+
+    height: 300px;
+    min-height: 300px;
+  }
+
+
+  .flexpay-final-content {
+
+    height: 300px;
+  }
+
+
+  .flexpay-final-image {
+
+    height: 300px;
+    min-height: 300px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .flexpay-page {
+
+    font-size: 11px;
+  }
+
+
+  /* =======================================================
+     HERO
+  ======================================================= */
+
+  .flexpay-hero {
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: auto;
+
+    min-height: 0;
+  }
+
+
+  .flexpay-hero-content {
+
+    width: 92%;
+
+    height: auto;
+
+    margin: auto;
+
+    padding:
+      21px
+      0
+      28px;
+  }
+
+
+  .flexpay-breadcrumb {
+
+    margin-bottom: 23px;
+
+    font-size: 9px;
+  }
+
+
+  .flexpay-eyebrow {
+
+    font-size: 13px;
+  }
+
+
+  .flexpay-hero-copy h1 {
+
+    font-size: 48px;
+
+    line-height: 0.9;
+  }
+
+
+  .flexpay-hero-copy p {
+
+    margin-top: 16px;
+
+    font-size: 10px;
+
+    line-height: 1.75;
+  }
+
+
+  .flexpay-desktop-only {
+
+    display: none;
+  }
+
+
+  .flexpay-hero-actions {
+
+    margin-top: 21px;
+
+    gap: 8px;
+  }
+
+
+  .flexpay-button {
+
+    min-height: 40px;
+
+    padding:
+      0 14px;
+
+    font-size: 8px;
+  }
+
+
+  /* Hero image */
+
+  .flexpay-hero-image {
+
+    width: 100%;
+
+    height: 300px;
+
+    min-height: 300px;
+
+    flex-shrink: 0;
+  }
+
+
+  .flexpay-hero-image img {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position:
+      center top;
+  }
+
+
+  /* =======================================================
+     BENEFITS
+  ======================================================= */
+
+  .flexpay-benefits {
+
+    width: 94%;
+
+    margin-top: 7px;
+
+    padding:
+      14px 12px;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap:
+      16px 10px;
+
+    border-radius: 4px;
+  }
+
+
+  .flexpay-benefit {
+
+    gap: 8px;
+  }
+
+
+  .flexpay-benefit-icon {
+
+    width: 27px;
+
+    height: 27px;
+  }
+
+
+  .flexpay-benefit strong {
+
+    font-size: 8px;
+  }
+
+
+  .flexpay-benefit p {
+
+    font-size: 7.5px;
+  }
+
+
+  /* =======================================================
+     PRODUCT SELECTION
+  ======================================================= */
+
+  .flexpay-selection {
+
+    width: 92%;
+
+    padding-top: 29px;
+  }
+
+
+  .flexpay-section-heading h2,
+  .flexpay-payment-heading h2,
+  .flexpay-how-heading h2 {
+
+    font-size: 29px;
+  }
+
+
+  .flexpay-tabs {
+
+    gap: 35px;
+
+    margin-top: 17px;
+  }
+
+
+  .flexpay-tabs button {
+
+    font-size: 8px;
+  }
+
+
+  .flexpay-product-wrapper {
+
+    grid-template-columns:
+      22px
+      minmax(0, 1fr)
+      22px;
+
+    gap: 4px;
+  }
+
+
+  .flexpay-product-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+  }
+
+
+  .flexpay-product-card:nth-child(n + 3) {
+
+    display: none;
+  }
+
+
+  .flexpay-product-image {
+
+    height: 155px;
+  }
+
+
+  .flexpay-product-info {
+
+    padding:
+      9px 8px 11px;
+  }
+
+
+  .flexpay-product-info h3 {
+
+    font-size: 14px;
+  }
+
+
+  .flexpay-product-info strong {
+
+    font-size: 9px;
+  }
+
+
+  .flexpay-product-info span {
+
+    font-size: 7px;
+  }
+
+
+  .flexpay-product-info b {
+
+    font-size: 8px;
+  }
+
+
+  /* =======================================================
+     PAYMENT
+  ======================================================= */
+
+  .flexpay-payment {
+
+    width: 92%;
+
+    padding-top: 21px;
+  }
+
+
+  .flexpay-payment-box {
+
+    margin-top: 17px;
+
+    padding:
+      18px 13px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 19px;
+  }
+
+
+  .flexpay-payment-product {
+
+    width: 100%;
+  }
+
+
+  .flexpay-payment-image {
+
+    width: 90px;
+
+    height: 90px;
+  }
+
+
+  .flexpay-payment-product-info strong {
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+  }
+
+
+  .flexpay-payment-product-info span {
+
+    font-size: 7px;
+  }
+
+
+  .flexpay-payment-product-info b {
+
+    font-size: 11px;
+  }
+
+
+  .flexpay-plan-selector {
+
+    width: 100%;
+  }
+
+
+  .flexpay-select select {
+
+    height: 37px;
+
+    font-size: 9px;
+  }
+
+
+  .flexpay-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+  }
+
+
+  .flexpay-table-head,
+  .flexpay-table-row {
+
+    min-width: 430px;
+  }
+
+
+  .flexpay-table-head {
+
+    font-size: 6.5px;
+  }
+
+
+  .flexpay-table-row {
+
+    min-height: 31px;
+
+    font-size: 7px;
+  }
+
+
+  .flexpay-start-button {
+
+    width: 100%;
+
+    min-height: 42px;
+
+    font-size: 8px;
+  }
+
+
+  /* =======================================================
+     HOW IT WORKS
+  ======================================================= */
+
+  .flexpay-how {
+
+    width: 92%;
+
+    padding:
+      26px 0
+      47px;
+  }
+
+
+  .flexpay-steps {
+
+    grid-template-columns:
+      1fr;
+
+    gap: 10px;
+
+    margin-top: 23px;
+  }
+
+
+  .flexpay-step {
+
+    padding:
+      21px 17px;
+  }
+
+
+  .flexpay-step-number {
+
+    font-size: 8px;
+  }
+
+
+  .flexpay-step h3 {
+
+    font-size: 19px;
+  }
+
+
+  .flexpay-step p {
+
+    font-size: 9px;
+
+    line-height: 1.7;
+  }
+
+
+  /* =======================================================
+     FINAL CTA
+     MOBILE IMAGE IS PART OF THE SECTION FLOW
+  ======================================================= */
+
+  .flexpay-final-cta {
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: auto;
+
+    min-height: 0;
+
+    overflow: hidden;
+  }
+
+
+  .flexpay-final-content {
+
+    width: 92%;
+
+    height: auto;
+
+    min-height: 260px;
+
+    margin: auto;
+
+    padding:
+      38px
+      0
+      32px;
+
+    justify-content: center;
+  }
+
+
+  .flexpay-final-content > span {
+
+    font-size: 9px;
+  }
+
+
+  .flexpay-final-content h2 {
+
+    font-size: 46px;
+
+    line-height: 0.9;
+  }
+
+
+  .flexpay-final-content p {
+
+    margin:
+      15px 0
+      20px;
+
+    font-size: 9px;
+  }
+
+
+  .flexpay-final-button {
+
+    min-height: 40px;
+
+    padding:
+      0 19px;
+
+    font-size: 8px;
+  }
+
+
+  /* Final image */
+
+  .flexpay-final-image {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 280px;
+
+    min-height: 280px;
+
+    flex-shrink: 0;
+  }
+
+
+  .flexpay-final-image img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position:
+      center 20%;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .flexpay-hero-copy h1 {
+
+    font-size: 43px;
+  }
+
+
+  .flexpay-hero-image {
+
+    height: 270px;
+
+    min-height: 270px;
+  }
+
+
+  .flexpay-benefits {
+
+    gap:
+      14px 7px;
+  }
+
+
+  .flexpay-benefit strong {
+
+    font-size: 7px;
+  }
+
+
+  .flexpay-benefit p {
+
+    font-size: 7px;
+  }
+
+
+  .flexpay-product-image {
+
+    height: 140px;
+  }
+
+
+  .flexpay-product-info h3 {
+
+    font-size: 13px;
+  }
+
+
+  .flexpay-final-content {
+
+    min-height: 275px;
+
+    padding:
+      38px
+      0
+      32px;
+  }
+
+
+  .flexpay-final-content h2 {
+
+    font-size: 42px;
+  }
+
+
+  .flexpay-final-image {
+
+    height: 260px;
+
+    min-height: 260px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .flexpay-hero-copy h1 {
+
+    font-size: 39px;
+  }
+
+
+  .flexpay-hero-actions {
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .flexpay-button {
+
+    width: 100%;
+  }
+
+
+  .flexpay-final-content h2 {
+
+    font-size: 38px;
+  }
+
+
+  .flexpay-final-image {
+
+    height: 240px;
+
+    min-height: 240px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .flexpay-page *,
+  .flexpay-page *::before,
+  .flexpay-page *::after {
+
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+  }
+
+}
